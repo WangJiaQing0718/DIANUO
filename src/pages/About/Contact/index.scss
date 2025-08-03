@@ -1,0 +1,125 @@
+.contact-childPage1 {
+    background-color: #f7f7f7;
+    padding: 2rem 0;
+    // border: 1px solid red;
+    z-index: -1 !important;
+}
+
+.contact-container {
+    width: 94%;
+    max-width: 1480px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+
+    // border: 1px solid black;
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    // border: 1px solid black;
+}
+
+.contact-flex-item {
+    flex: 1;
+    min-width: 400px;
+    box-sizing: border-box;
+    // border: 1px solid seagreen;
+
+}
+
+.contact-con {
+    margin: 50px;
+
+    .contact-p1 {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 48px;
+        font-weight: 700;
+        color: #47a8e5;
+        margin: 0px;
+    }
+
+    .contact-p2 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        color: #202020;
+        margin: 15px 0px;
+    }
+
+    .contact-p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        color: #333333;
+        line-height: 1.8;
+        margin: 0;
+    }
+}
+
+.contact-binCode {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    padding-top: 5%;
+
+    .binCode-p1 {
+        margin: 15px 20px 0px 15px;
+        color: #333333;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    .binCode-p2 {
+        margin: 5px 15px;
+        color: #333333;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+    }
+}
+
+.branch-firm {
+    background-color: #ffffff;
+    padding: 50px;
+
+    .branch-firm-p1 {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 48px;
+        font-weight: 700;
+        color: #47a8e5;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .branch-firm-p2 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        color: #202020;
+        margin: 15px 0px;
+    }
+}
+
+.branch-firm-content {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    // border: 1px solid black;
+}
+
+.branch-firm-item {
+    flex: 1;
+    min-width: 200px;
+    box-sizing: border-box;
+    // border: 1px solid seagreen;
+
+    p {
+        font-size: 16px;
+        font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+        line-height: 32px;
+        color: #333333;
+    }
+}

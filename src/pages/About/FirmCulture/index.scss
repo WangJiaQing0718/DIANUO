@@ -1,0 +1,38 @@
+.container2 {
+    margin-bottom: 30px;
+    // border: 1px solid blue;
+    overflow: hidden;
+}
+
+.content2 {
+    display: flex;
+    flex-wrap: wrap; // 允许换行
+}
+
+.flex-item2 {
+    flex: 1; // 自动分配剩余空间
+    min-width: 650px;
+    box-sizing: border-box;
+    // border: 1px solid seagreen;
+
+}
+
+.pic2 {
+    width: 100%;
+    object-fit: cover;
+}
+
+.paraCon {
+    background-color: #117fcc;
+}
+
+.para2 {
+    padding: 118.3px 60px;
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 32px;
+
+    p {
+        margin: 0px;
+    }
+}

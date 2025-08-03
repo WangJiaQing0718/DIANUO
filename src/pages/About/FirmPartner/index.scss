@@ -1,0 +1,51 @@
+.container5 {
+    margin-bottom: 30px;
+    // border: 1px solid blue;
+    overflow: hidden;
+}
+
+.content5 {
+    display: flex;
+    flex-wrap: wrap; // 允许换行
+}
+
+.colItem1 {
+    flex: 3;
+    min-width: 200px;
+    margin: 50px 0px;
+}
+
+.colItem2 {
+    flex: 7;
+    min-width: 600px;
+}
+
+.picList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.picBox {
+    flex: 0 0 33.3%;
+    position: relative;
+}
+
+.picConBox {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 0 10px;
+}
+
+.picCon {
+    max-width: 240px;
+    // overflow: hidden;
+    border: 1px solid #dcdfe6;
+    margin: 10px auto;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}

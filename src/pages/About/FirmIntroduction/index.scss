@@ -1,0 +1,42 @@
+.container {
+    background-color: #ffffff;
+    // border: 1px solid blue;
+    padding: 50px 40px;
+    
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap; // 允许换行
+    
+}
+
+.flex-item {
+    flex: 1; // 自动分配剩余空间
+    min-width: 650px;
+    box-sizing: border-box;
+    // border: 1px solid seagreen;
+    
+}
+
+.pic {
+    width: 100%;
+    height: auto;
+}
+
+.line {
+    border: 1.5px solid #2f9be0;
+    width: 64px;
+    margin-left: 0px;
+}
+
+.para {
+    font-size: 16px;
+    color: #444444;
+    line-height: 32px;
+    margin: 0px;
+
+    p {
+        margin: 0;
+    }
+}
