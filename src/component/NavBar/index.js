@@ -108,6 +108,13 @@ const NavBar = () => {
         }));
     };
 
+    // 修复下滑距离不为0时，鼠标移动导致的样式错误
+    const mouseLeaveChange = () => {
+        if(scrollTopHeight === 0 ){
+            setIsTransparent(true);
+        }
+    }
+
     
 
     return (
@@ -115,7 +122,7 @@ const NavBar = () => {
             {/* 顶部导航栏 */}
             <div className="navbar-container"
                 onMouseEnter={() => setIsTransparent(false)}
-                onMouseLeave={() => setIsTransparent(true)}
+                onMouseLeave={() => mouseLeaveChange()}
                 style={{ backgroundColor: isMobile? '#ffffff' : (isTransparent ? 'transparent' : '#ffffff') }}
             >
                 <div className='navbar-box'>
@@ -130,7 +137,7 @@ const NavBar = () => {
 
 
                     {/* 导航栏 */}
-                    <div className={`navbar ${isMobile ? 'mobile-nav' : ''} ${isMobileMenuOpen ? 'mobile-nav-open' : ''}`}style={{ color: isMobile? '#333333' : (isTransparent ? "#ffffff" : "#333333") }}>
+                    <div className={`navbar ${isMobile ? 'mobile-nav' : ''} ${isMobileMenuOpen ? 'mobile-nav-open' : ''}`} style={{ color: isMobile? '#333333' : (isTransparent ? "#ffffff" : "#333333") }}>
                         {navBarList.map((page, index) => (
                             <div key={page.path} className='nav-item' onMouseEnter={!isMobile ? () => setHoveredNav(index) : undefined} onMouseLeave={!isMobile ? () => setHoveredNav(null) : undefined}>
                                 <div className='nav-btn' onClick={() => navItemClickEvent(page, index)}>{page.name}
