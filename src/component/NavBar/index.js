@@ -110,12 +110,10 @@ const NavBar = () => {
 
     // 修复下滑距离不为0时，鼠标移动导致的样式错误
     const mouseLeaveChange = () => {
-        if(scrollTopHeight === 0 ){
+        if (scrollTopHeight === 0) {
             setIsTransparent(true);
         }
     }
-
-    
 
     return (
         <div>
@@ -123,12 +121,12 @@ const NavBar = () => {
             <div className="navbar-container"
                 onMouseEnter={() => setIsTransparent(false)}
                 onMouseLeave={() => mouseLeaveChange()}
-                style={{ backgroundColor: isMobile? '#ffffff' : (isTransparent ? 'transparent' : '#ffffff') }}
+                style={{ backgroundColor: isMobile ? '#ffffff' : (isTransparent ? 'transparent' : '#ffffff') }}
             >
                 <div className='navbar-box'>
                     {/* 图标 */}
                     <img
-                        src={isMobile ? "http://nas.wjq718.fun:10001/imageFiles/f7wlx6adyth5801e.png" : (isTransparent ? "http://nas.wjq718.fun:10001/imageFiles/zyvgjw16ca8kxolm.png" : "http://nas.wjq718.fun:10001/imageFiles/f7wlx6adyth5801e.png") }
+                        src={isMobile ? "http://nas.wjq718.fun:10001/imageFiles/f7wlx6adyth5801e.png" : (isTransparent ? "http://nas.wjq718.fun:10001/imageFiles/zyvgjw16ca8kxolm.png" : "http://nas.wjq718.fun:10001/imageFiles/f7wlx6adyth5801e.png")}
                         alt='icon'
                         className="navbar-logo"
                         title='南京典诺生物技术有限公司'
@@ -137,7 +135,7 @@ const NavBar = () => {
 
 
                     {/* 导航栏 */}
-                    <div className={`navbar ${isMobile ? 'mobile-nav' : ''} ${isMobileMenuOpen ? 'mobile-nav-open' : ''}`} style={{ color: isMobile? '#333333' : (isTransparent ? "#ffffff" : "#333333") }}>
+                    <div className={`navbar ${isMobile ? 'mobile-nav' : ''} ${isMobileMenuOpen ? 'mobile-nav-open' : ''}`} style={{ color: isMobile ? '#333333' : (isTransparent ? "#ffffff" : "#333333") }}>
                         {navBarList.map((page, index) => (
                             <div key={page.path} className='nav-item' onMouseEnter={!isMobile ? () => setHoveredNav(index) : undefined} onMouseLeave={!isMobile ? () => setHoveredNav(null) : undefined}>
                                 <div className='nav-btn' onClick={() => navItemClickEvent(page, index)}>{page.name}
@@ -182,7 +180,7 @@ const NavBar = () => {
 
                         <div class={`changeLanguage ${isOpenLanguage ? 'open' : ''}`} ref={changeOpenRef}>
                             <div className='currentLan' onClick={() => setIsOpenLanguage(!isOpenLanguage)}
-                                style={{ backgroundColor: isMobile? "rgba(255, 255, 255, 0.8)" : (isTransparent ? "#d9eaf5" : "rgba(255, 255, 255, 0.8)") }}
+                                style={{ backgroundColor: isMobile ? "rgba(255, 255, 255, 0.8)" : (isTransparent ? "#d9eaf5" : "rgba(255, 255, 255, 0.8)") }}
                             >{isChinese ? "中文简体" : "English"}</div>
 
                             <div className="language-menu">

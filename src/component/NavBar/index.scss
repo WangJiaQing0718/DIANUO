@@ -127,7 +127,7 @@
 // ——————————————————————— 导航栏移动端样式 —————————————————————————————
 
 @media (max-width: 768px) {
-
+    
     .mobile-toggle-button {
         display: block;
     }
@@ -143,6 +143,7 @@
         border: 1px solid #ddd;
         z-index: 1000;
         overflow-y: auto;
+
         &.mobile-nav-open {
             display: flex;
             opacity: 1;
