@@ -4,8 +4,6 @@
     overflow: hidden;
     margin: 0;
     padding: 0;
-    // text-decoration: none;
-    // list-style: none;
     background-repeat: no-repeat;
     display: flex;
 }
@@ -18,7 +16,7 @@
 
 .slideShow_PicItem {
     flex: 0 0 100%;
-
+    
     img {
         width: 100%;
         height: 100%;
@@ -26,11 +24,12 @@
     }
 }
 
+
 .control_Button {
     flex: 1;
     height: 50px;
     width: 150px;
-    bottom: 70px;
+    bottom: 150px;
     right: 100px;
     position: absolute;
     box-sizing: border-box;
@@ -53,7 +52,7 @@
 
 .dots {
     flex: 1;
-    bottom: 70px;
+    bottom: 150px;
     left: 100px;
     position: absolute;
     list-style: none;

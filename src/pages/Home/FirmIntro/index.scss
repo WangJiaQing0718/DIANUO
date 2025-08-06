@@ -1,0 +1,136 @@
+.FirmIntro_Container {
+    position: relative;
+    width: 100%;
+    background-color: white;
+    overflow: hidden;
+    margin-top: -100px;
+    padding: 100px 0px;
+    display: flex;
+    // border: 1px solid red;
+}
+
+.FirmIntro_Content {
+    width: 90%;
+    max-width: 1600px;
+    text-align: center;
+    margin: 0 auto;
+    // border: 1px solid red;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.FirmIntro_item {
+    padding: 50px 0;
+    flex: 1;
+    min-width: 384px;
+    box-sizing: border-box;
+    // border: 1px solid rgb(76, 209, 120);
+    position: relative;
+}
+
+.FirmIntro_pic {
+    width: 100%;
+    border-radius: 10px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.blueBlock {
+    position: absolute;
+    border-radius: 10px;
+    left: 60%;
+    width: 700px;
+    height: 100%;
+    background-color: #2f9be0;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.FirmIntro_AboutText {
+    font-size: 172px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px rgba(143, 143, 143, 0.1);
+
+    z-index: 1;
+    position: absolute;
+}
+
+.FirmIntro_Title {
+    margin-top: 120px;
+    text-align: left;
+    margin-right: 50px;
+
+    .FirmIntro_Title div:first-child {
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 30px;
+        color: rgb(16, 16, 16);
+    }
+
+    div {
+        color: rbg(71, 71, 71);
+        font-size: 16px;
+        line-height: 32px;
+    }
+}
+
+.number_Animation {
+    margin-top: 30px;
+    // border: 1px solid rgb(76, 209, 120);
+    padding: 15px 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    div {
+        span:first-child {
+            font-size: 54px;
+            color: rgb(47, 155, 224);
+            font-weight: 700;
+        }
+
+        span:last-child {
+            font-size: 16px;
+            color: rgb(47, 155, 224);
+        }
+
+    }
+
+}
+
+.number_Title {
+    // border: 1px solid rgb(76, 209, 120);
+    padding: 15px 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    div {
+        font-size: 18px;
+        color: rgb(102, 102, 102);
+
+    }
+}
+
+.FirmIntro_button {
+    margin-top: 20px;
+    text-align: left;
+    height: 50px;
+    width: 200px;
+    border: none;
+    background-color: #ffffff;
+    border: 2px solid rgb(47, 155, 224);
+    border-radius: 30px;
+    text-align: center;
+    font-size: 18px;
+    color: rgb(47, 155, 224);
+}
+
+.FirmIntro_button:hover {
+    background-color: rgb(47, 155, 224);
+    color: #ffffff;
+}

@@ -14,12 +14,10 @@ const SlideShow = () => {
         picItemsRef.current = document.querySelectorAll('.slideShow_PicItem');
         dotsRef.current = document.querySelectorAll('.dots li, .dots_Mobile li');
         showSlide();
-        
-        // 初始化自动播放
+
         startAutoPlay();
-        
+
         return () => {
-            // 组件卸载时清除定时器
             stopAutoPlay();
         };
     }, []);
@@ -31,7 +29,7 @@ const SlideShow = () => {
 
     // 开始自动播放
     const startAutoPlay = () => {
-        stopAutoPlay(); // 先停止现有的定时器
+        stopAutoPlay();
         timerRef.current = setInterval(() => {
             nextSlide();
         }, 3000);
@@ -94,18 +92,18 @@ const SlideShow = () => {
     // 鼠标事件处理
     useEffect(() => {
         const slideshow = document.getElementById('slideshow');
-        
+
         const handleMouseEnter = () => {
             stopAutoPlay();
         };
-        
+
         const handleMouseLeave = () => {
             startAutoPlay();
         };
-        
+
         slideshow.addEventListener('mouseenter', handleMouseEnter);
         slideshow.addEventListener('mouseleave', handleMouseLeave);
-        
+
         return () => {
             slideshow.removeEventListener('mouseenter', handleMouseEnter);
             slideshow.removeEventListener('mouseleave', handleMouseLeave);
@@ -116,16 +114,16 @@ const SlideShow = () => {
         <div className='slideShow_Container' id="slideshow">
             <div className='slideShow_Content'>
                 <div className='slideShow_PicItem'>
-                    <img src="http://nas.wjq718.fun:10001/imageFiles/spy146xaq3wztjnb.jpg"></img>
+                    <img src="http://nas.wjq718.fun:10001/imageFiles/spy146xaq3wztjnb.jpg" alt='pic'></img>
                 </div>
                 <div className='slideShow_PicItem'>
-                    <img src="http://nas.wjq718.fun:10001/imageFiles/nrk5xjdcv78leumo.jpg"></img>
+                    <img src="http://nas.wjq718.fun:10001/imageFiles/nrk5xjdcv78leumo.jpg" alt='pic'></img>
                 </div>
                 <div className='slideShow_PicItem'>
-                    <img src="http://nas.wjq718.fun:10001/imageFiles/rhv3oz8qwfcs90tm.png"></img>
+                    <img src="http://nas.wjq718.fun:10001/imageFiles/rhv3oz8qwfcs90tm.png" alt='pic'></img>
                 </div>
                 <div className='slideShow_PicItem'>
-                    <img src="http://nas.wjq718.fun:10001/imageFiles/rzlwkeutadgx7os3.png"></img>
+                    <img src="http://nas.wjq718.fun:10001/imageFiles/rzlwkeutadgx7os3.png" alt='pic'></img>
                 </div>
             </div>
 
@@ -140,6 +138,19 @@ const SlideShow = () => {
                 <li onClick={() => jumpToSlide(2)}></li>
                 <li onClick={() => jumpToSlide(3)}></li>
             </div>
+
+            {/* <div className="Slide_text" id="slidetext">
+                <div></div>
+                <div></div>
+                <div>
+                    <div>专业 快速 准确 稳定</div>
+                    <div>提供优质的医疗产品和专业化的服务，使临床检验更加高效可靠</div>
+                    <div><button>查看更多</button></div>
+                </div>
+                <div></div>
+            </div> */}
+
+
         </div>
     )
 }

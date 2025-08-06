@@ -4,6 +4,7 @@ import { useContext } from "react"
 import { DeviceContext } from "@/deviceContext"
 import ButtomBar from "@/component/ButtomBar"
 import SlideShow from "./SlideShow"
+import FirmIntro from "./FirmIntro"
 
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
         <div>
             <div><NavBar/></div>
             <div><SlideShow /></div>
+            <div><FirmIntro /></div>
             
             
             <div>1234567890</div>
