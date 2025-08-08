@@ -22,7 +22,7 @@ const { setNavBarList } = navBarStore.actions
 const getNavBarList = () => {
     return async (dispatch) => {
         const res = await axios.get('http://nas.wjq718.fun:10022/router')
-        console.log("res:",res)
+        // console.log("res:",res)
         dispatch(setNavBarList(res.data.data))
     }
 }

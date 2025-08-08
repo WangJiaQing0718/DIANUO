@@ -11,5 +11,9 @@ npm install axios --save
 
 
 
-# 微软雅黑
-font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+
+### 页面中部路由信息获取
+1、useLocation() 获取当前路由信息
+2、解析出 location.pathname 中的信息
+3、将解析信息与 Router 信息匹配得到当前路由序号
+4、获取参数信息渲染页面

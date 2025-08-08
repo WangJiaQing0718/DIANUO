@@ -3,7 +3,7 @@ import './index.scss';
 import NavBar from '@/component/NavBar';
 import ButtomBar from '@/component/ButtomBar';
 
-const English = () => {
+const Error = () => {
   return (
     <div>
       <div><NavBar/></div>
@@ -29,4 +29,4 @@ const English = () => {
   );
 };
 
-export default English;
+export default Error;

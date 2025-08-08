@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, useLoaderData } from "react-router-dom";
 import Home from "../pages/Home";
 import About from "../pages/About";
 import Product from "@/pages/Product";
@@ -6,7 +6,7 @@ import Service from "@/pages/Service";
 import News from "@/pages/News";
 import Recruit from "@/pages/Recruit";
 import Contact from "@/pages/Contact";
-import English from "@/pages/English";
+import Error from "@/pages/Error";
 
 // 页面路由
 const router = createBrowserRouter([
@@ -20,27 +20,27 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <English />
+        element: <Error />
       },
       {
         path: 'firmintroduction',
-        element: <English />
+        element: <Error />
       },
       {
         path: 'firmculture',
-        element: <English />
+        element: <Error />
       },
       {
         path: 'firmhonor',
-        element: <English />,
+        element: <Error />
       },
       {
         path: 'firmhistory',
-        element: <English />
+        element: <Error />
       },
       {
         path: 'firmpartner',
-        element: <English />
+        element: <Error />
       }
     ]
   },
@@ -50,23 +50,23 @@ const router = createBrowserRouter([
     children: [
       {
         path: '',
-        element: <English />
+        element: <Error />
       },
       {
         path: '',
-        element: <English />
+        element: <Error />
       },
       {
         path: '',
-        element: <English />
+        element: <Error />
       },
       {
         path: '',
-        element: <English />
+        element: <Error />
       },
       {
         path: '',
-        element: <English />
+        element: <Error />
       }
     ]
   },
@@ -76,19 +76,19 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <English />
+        element: <Error />
       },
       {
         path: 'aftersale',
-        element: <English />
+        element: <Error />
       },
       {
         path: 'download',
-        element: <English />
+        element: <Error />
       },
       {
         path: 'video',
-        element: <English />
+        element: <Error />
       }
     ]
   },
@@ -98,15 +98,15 @@ const router = createBrowserRouter([
     children: [
       {
         path: '',
-        element: <English />
+        element: <Error />
       },
       {
         path: '',
-        element: <English />
+        element: <Error />
       },
       {
         path: '',
-        element: <English />
+        element: <Error />
       }
     ]
   },
@@ -116,15 +116,15 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <English />
+        element: <Error />
       },
       {
         path: 'requirement',
-        element: <English />
+        element: <Error />
       },
       {
         path: 'position',
-        element: <English />
+        element: <Error />
       }
     ]
   },
@@ -134,18 +134,18 @@ const router = createBrowserRouter([
     children: [
       {
         path: '',
-        element: <English />
+        element: <Error />
       },
       {
         path: '',
-        element: <English />
+        element: <Error />
       }
     ]
   },
   // en
   {
-    path: 'English',
-    element: <English />
+    path: 'Error',
+    element: <Error />
   }
 ])
 

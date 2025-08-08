@@ -21,11 +21,11 @@ const ButtomBar = () => {
     useEffect(() => {
         dispatch(getNavBarList())
     }, [dispatch])
-    console.log("navBarList:", navBarList)
+    // console.log("navBarList:", navBarList)
 
     // 使用可选链防止 navBarList 未定义时报错
     const col2List = navBarList?.slice(1);
-    console.log("col2List:", col2List)
+    // console.log("col2List:", col2List)
 
     const navigate = useNavigate()
     // 一级路由点击事件
