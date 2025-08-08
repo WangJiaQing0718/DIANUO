@@ -14,18 +14,19 @@
     height: 100%;
     max-width: 1600px;
     // border: 1px solid red;
-
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .midNav_Box {
     height: 100%;
     // border: 1px solid skyblue;
-    width: 100%;
+    width: 80%;
     white-space: nowrap;
     overflow-x: auto;
     position: relative;
 
-    div {
+    .midNav_Div {
         width: 120px;
         // border: 1px solid skyblue;
         text-align: center;
@@ -39,7 +40,7 @@
         transition: all 0.3s ease;
 
 
-        /* 伪元素背景效果 */
+        // 伪元素背景效果
         &::after {
             content: '';
             position: absolute;
@@ -52,18 +53,18 @@
             z-index: -1;
         }
 
-        /* 悬停效果 */
+        // 悬停效果
         &:hover::after {
             height: 100%;
         }
 
-        /* 点击/激活效果 */
+        // 激活效果
         &.active::after {
             height: 100%;
         }
     }
 
-    div:hover {
+    .midNav_Div:hover {
         color: white;
     }
 }
@@ -75,6 +76,14 @@ p {
 
 }
 
-.midNav_Box div:last-child p {
+.midNav_Box .midNav_Div:last-child p {
     border-right: none;
+}
+
+.routerLink {
+    // border: 1px solid red;
+    height: 100%;
+    margin: 25px 0px;
+    margin-left: auto;
+    display: flex;
 }
