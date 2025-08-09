@@ -7,6 +7,7 @@ import News from "@/pages/News";
 import Recruit from "@/pages/Recruit";
 import Contact from "@/pages/Contact";
 import Error from "@/pages/Error";
+import FirmIntroduction from "@/pages/About/FirmIntroduction";
 
 // 页面路由
 const router = createBrowserRouter([
@@ -20,11 +21,11 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Error />
+        element: <FirmIntroduction />
       },
       {
         path: 'firmintroduction',
-        element: <Error />
+        element: <FirmIntroduction />
       },
       {
         path: 'firmculture',
@@ -49,23 +50,27 @@ const router = createBrowserRouter([
     element: <Product />,
     children: [
       {
-        path: '',
+        index: true,
         element: <Error />
       },
       {
-        path: '',
+        path: 'fxy',
         element: <Error />
       },
       {
-        path: '',
+        path: 'sj',
         element: <Error />
       },
       {
-        path: '',
+        path: 'hc',
         element: <Error />
       },
       {
-        path: '',
+        path: 'other',
+        element: <Error />
+      },
+      {
+        path: 'newproduct',
         element: <Error />
       }
     ]
@@ -97,15 +102,19 @@ const router = createBrowserRouter([
     element: <News />,
     children: [
       {
-        path: '',
+        index: true,
         element: <Error />
       },
       {
-        path: '',
+        path: 'firmnews',
         element: <Error />
       },
       {
-        path: '',
+        path: 'industrynews',
+        element: <Error />
+      },
+      {
+        path: 'medianews',
         element: <Error />
       }
     ]

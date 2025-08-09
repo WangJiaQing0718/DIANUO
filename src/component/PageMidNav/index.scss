@@ -5,8 +5,10 @@
     align-items: center;
     justify-content: center;
     // border: 1px solid red;
+    background-color: white;
     box-sizing: border-box;
     box-shadow: 0 5px 5px #e0e0e0;
+    z-index: 2;
 }
 
 .pageMidNav_Content {
@@ -16,6 +18,7 @@
     // border: 1px solid red;
     display: flex;
     flex-wrap: wrap;
+    z-index: 1;
 }
 
 .midNav_Box {
@@ -33,6 +36,7 @@
         line-height: 72.5px;
         display: inline-block;
         color: #666666;
+
 
         position: relative;
         overflow: hidden; // 隐藏溢出的伪元素
@@ -73,7 +77,6 @@ p {
     margin: 25px 0px;
     line-height: 22.5px;
     border-right: 1px solid #cccccc;
-
 }
 
 .midNav_Box .midNav_Div:last-child p {

@@ -1,6 +1,8 @@
 import NavBar from "@/component/NavBar"
 import './index.scss'
 import HeadSection from "@/component/HeadSection"
+import { Outlet } from "react-router-dom"
+import ButtomBar from "@/component/ButtomBar"
 
 const Service = () => {
 
@@ -14,6 +16,9 @@ const Service = () => {
                     imageUrl="http://nas.wjq718.fun:10001/imageFiles/gydvhmkcx302q1oj.jpg"
                 />
             </div>
+
+            <div><Outlet /></div>
+            <div><ButtomBar /></div>
         </div>
     )
 }

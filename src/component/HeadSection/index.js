@@ -22,9 +22,9 @@ const HeadSection = ({ headTitle, enHeadTitle, imageUrl }) => {
                 </div>
             </div>
 
-            <div>
-                <PageMidNav/>
-            </div>
+            {enHeadTitle !== "CONTACT US" && <div>
+                <PageMidNav />
+            </div>}
         </div>
     )
 }

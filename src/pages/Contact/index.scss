@@ -1,125 +1,183 @@
-.contact-childPage1 {
-    background-color: #f7f7f7;
-    padding: 2rem 0;
-    // border: 1px solid red;
-    z-index: -1 !important;
-}
-
-.contact-container {
-    width: 94%;
-    max-width: 1480px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f7f7f7;
-
-    // border: 1px solid black;
-}
-
-.contact-content {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #ffffff;
-    // border: 1px solid black;
-}
-
-.contact-flex-item {
-    flex: 1;
-    min-width: 400px;
-    box-sizing: border-box;
-    // border: 1px solid seagreen;
-
-}
-
-.contact-con {
-    margin: 50px;
-
-    .contact-p1 {
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        font-size: 48px;
-        font-weight: 700;
-        color: #47a8e5;
-        margin: 0px;
-    }
-
-    .contact-p2 {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 22px;
-        font-weight: 700;
-        color: #202020;
-        margin: 15px 0px;
-    }
-
-    .contact-p {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 16px;
-        color: #333333;
-        line-height: 1.8;
-        margin: 0;
-    }
-}
-
-.contact-binCode {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+// ——————————————————————————————————— 中部路由 ———————————————————————————————————
+.contact_PageMidNav {
     width: 100%;
-    padding-top: 5%;
-
-    .binCode-p1 {
-        margin: 15px 20px 0px 15px;
-        color: #333333;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 15px;
-        font-weight: 700;
-    }
-
-    .binCode-p2 {
-        margin: 5px 15px;
-        color: #333333;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 15px;
-    }
-}
-
-.branch-firm {
-    background-color: #ffffff;
-    padding: 50px;
-
-    .branch-firm-p1 {
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        font-size: 48px;
-        font-weight: 700;
-        color: #47a8e5;
-        margin: 0px;
-        padding: 0px;
-    }
-
-    .branch-firm-p2 {
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 22px;
-        font-weight: 700;
-        color: #202020;
-        margin: 15px 0px;
-    }
-}
-
-.branch-firm-content {
+    height: 72.5px;
+    position: relative;
     display: flex;
-    flex-wrap: wrap;
-    background-color: #ffffff;
-    // border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0 5px 5px #e0e0e0;
+    z-index: 2;
 }
 
-.branch-firm-item {
-    flex: 1;
-    min-width: 200px;
-    box-sizing: border-box;
-    // border: 1px solid seagreen;
+.pageMidNav_Box {
+    width: 90%;
+    max-width: 1600px;
+}
 
-    p {
-        font-size: 16px;
-        font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+// ——————————————————————————————————— 联系方式 ———————————————————————————————————
+
+.contact_Container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    // border: 1px solid red;
+}
+
+.contact_Content {
+
+    margin: 60px 0px;
+    width: 90%;
+    max-width: 1600px;
+    // border: 1px solid red;
+}
+
+.contact_gridLayout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+
+    div {
         line-height: 32px;
+        font-size: 16px;
+        color: #666666;
+    }
+}
+
+.grid_div1 {
+    div {
+        color: black;
+    }
+}
+
+.grid_div1_icon {
+    position: relative;
+    display: inline-block;
+
+    img {
+        width: 30px;
+        top: -80px;
+        left: 0px;
+        position: absolute;
+    }
+}
+
+
+.grid_div2 {
+    grid-column: 2/4;
+
+    @media (max-width: 768px) {
+        grid-column: 1;
+    }
+
+    div {
+        color: #666666;
+    }
+}
+
+.grid_div2_gridLayout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr; // 移动端改为1列
+    }
+}
+
+
+// ——————————————————————————————————— 在线留言 ———————————————————————————————————
+
+.message_Container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message_Content {
+    width: 90%;
+    max-width: 1600px;
+    margin: 100px 0px;
+}
+
+.message_gridLayout {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 768px) {
+    .message_gridLayout {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.grid_Message1 {
+
+    .contact_InputBox {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        height: 100px;
+        margin: 20px 0px;
+        padding: 10px 10px;
+        box-sizing: border-box;
+        border: 1px solid #ced4da;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+        outline: none;
+        border-radius: 5px;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
         color: #333333;
+        font-size: 14px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    }
+
+}
+
+.grid_Message2 {
+
+    img {
+        width: 100%;
+        border-radius: 20px;
+    }
+}
+
+.submitBtn {
+    margin-top: 20px;
+
+    button {
+        display: block;
+        margin: auto;
+        width: 100%;
+        height: 40px;
+        text-align: center;
+        color: #ffffff;
+        font-size: 14px;
+        line-height: 21px;
+        border: #ffffff;
+        border-radius: 5px;
+        background-image: linear-gradient(to right, rgb(47, 155, 224), rgb(132, 199, 241));
+    }
+
+    button::after {
+        background-image: radial-gradient(circle, rgb(47, 155, 224), rgb(132, 199, 241), rgb(47, 155, 224));
     }
 }
