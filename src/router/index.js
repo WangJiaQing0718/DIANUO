@@ -10,6 +10,7 @@ import Error from "@/pages/Error";
 import FirmIntroduction from "@/pages/About/FirmIntroduction";
 import FirmHoner from "@/pages/About/FirmHonor";
 import FirmPartner from "@/pages/About/FirmPartner";
+import FirmCulture from "@/pages/About/FirmCulture";
 
 // 页面路由
 const router = createBrowserRouter([
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'firmculture',
-        element: <Error />
+        element: <FirmCulture />
       },
       {
         path: 'firmhonor',

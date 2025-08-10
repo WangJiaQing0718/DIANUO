@@ -1,38 +1,90 @@
-.container2 {
-    margin-bottom: 30px;
-    // border: 1px solid blue;
-    overflow: hidden;
-}
-
-.content2 {
-    display: flex;
-    flex-wrap: wrap; // 允许换行
-}
-
-.flex-item2 {
-    flex: 1; // 自动分配剩余空间
-    min-width: 650px;
-    box-sizing: border-box;
-    // border: 1px solid seagreen;
-
-}
-
-.pic2 {
+.firmCulture_Container{
     width: 100%;
-    object-fit: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fafafa;
+    // border: 1px solid red;
 }
 
-.paraCon {
-    background-color: #117fcc;
+.firmCulture_Content {
+    width: 90%;
+    max-width: 1600px;
+    margin: 50px 0px;
+    // border: 1px solid red;
 }
 
-.para2 {
-    padding: 118.3px 60px;
-    font-size: 16px;
-    color: #ffffff;
-    line-height: 32px;
+.firmCulture_head {
+    font-size: 44px;
+    font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+    line-height: 50px;
+    font-weight: 700;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-    p {
-        margin: 0px;
+.firmCulture_GridLayout {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
     }
+    // border: 1px solid skyblue;
+}
+
+.firmCulture_GridItem {
+    background-color: white;
+    padding: 40px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    box-shadow: 0 0 5px 5px #efefef;
+    position: relative;
+}
+
+.gridItem_Icon {
+    img {
+        width: 80px;
+        border-radius: 40px;
+        transition: transform 0.5s ease; /* 添加平滑过渡效果 */
+    }
+    
+    img:hover {
+        animation: rotateOnce 0.5s ease; /* 触摸时触发旋转动画 */
+    }
+}
+
+@keyframes rotateOnce {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.gridItem_Title {
+    font-size: 24px;
+    color: #212529;
+    line-height: 36px;
+    margin: 20px 0px;
+}
+
+.gridItem_Text {
+    font-size: 16px;
+    color: #686868;
+    line-height: 30px;
+    margin: 20px 0px;
+}
+
+.gridItem_Num {
+    font-size: 80px;
+    color: rgba(3, 78, 183, 0.03);
+    font-weight: 700;
+    height: 200px;
+    top: 30px;
+    right: 20px;
+    position: absolute;
 }
