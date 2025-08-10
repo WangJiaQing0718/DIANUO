@@ -1,32 +1,95 @@
-.container5 {
-    margin-bottom: 30px;
-    // border: 1px solid blue;
-    overflow: hidden;
-}
-
-.content5 {
+.firmPartner_Container {
+    width: 100%;
+    position: relative;
     display: flex;
-    flex-wrap: wrap; // 允许换行
+    align-items: center;
+    justify-content: center;
+    // border: 1px solid red;
+    background-color: white;
+    position: relative;
 }
 
-.colItem1 {
-    flex: 3;
-    min-width: 200px;
+.firmPartner_Content {
+    margin: 100px 0px;
+    width: 90%;
+    max-width: 1600px;
+    // border: 1px solid red;
+    z-index: 2;
+}
+
+.firmPartner_BgImg {
+    height: 200px;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.firmPartner_GridLayout {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+
+    gap:100px;
+    align-items: center;
+    justify-content: center;
+
+    .gridItem1 {
+        grid-column: 1/4;
+
+        @media (max-width: 768px) {
+            grid-column: 1;
+        }
+
+        margin: 50px 0px;
+        // border: 1px solid rgb(29, 56, 191);
+    }
+
+    .gridItem2 {
+        grid-column: 4/6;
+
+        @media (max-width: 768px) {
+            grid-column: 1;
+        }
+
+        // border: 1px solid rgb(29, 191, 59);
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+.gridItem1_text1 {
+    font-size: 52px;
+    line-height: 75px;
+    color: #444444;
     margin: 50px 0px;
 }
 
-.colItem2 {
-    flex: 7;
-    min-width: 600px;
+.gridItem1_text2 {
+    font-size: 16px;
+    line-height: 30px;
+    color: #666666;
+    margin: 50px 0px;
 }
+
 
 .picList {
     display: flex;
     flex-wrap: wrap;
+    // border: 1px solid grey;
 }
 
 .picBox {
-    flex: 0 0 33.3%;
+    flex: 0 0 20%;
+
+    @media (max-width: 768px) {
+        flex: 0 0 33.3%;
+    }
+
     position: relative;
 }
 

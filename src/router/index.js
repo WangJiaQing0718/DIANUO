@@ -8,6 +8,8 @@ import Recruit from "@/pages/Recruit";
 import Contact from "@/pages/Contact";
 import Error from "@/pages/Error";
 import FirmIntroduction from "@/pages/About/FirmIntroduction";
+import FirmHoner from "@/pages/About/FirmHonor";
+import FirmPartner from "@/pages/About/FirmPartner";
 
 // 页面路由
 const router = createBrowserRouter([
@@ -33,7 +35,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'firmhonor',
-        element: <Error />
+        element: <FirmHoner />
       },
       {
         path: 'firmhistory',
@@ -41,7 +43,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'firmpartner',
-        element: <Error />
+        element: <FirmPartner />
       }
     ]
   },
