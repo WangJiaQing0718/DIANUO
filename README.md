@@ -11,6 +11,9 @@ npm install axios --save
 3、产品展示页数据
 4、产品详情页数据
 
+### 3、FastAPI 文档
+http://nas.wjq718.fun:10025/docs
+
 
 ## 部分组件、页面设计思路
 
