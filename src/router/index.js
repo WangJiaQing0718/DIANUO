@@ -53,10 +53,6 @@ const router = createBrowserRouter([
     element: <Product />,
     children: [
       {
-        index: true,
-        element: <Error />
-      },
-      {
         path: 'fxy',
         element: <Error />
       },

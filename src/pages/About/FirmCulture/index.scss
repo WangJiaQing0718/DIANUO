@@ -26,6 +26,7 @@
 }
 
 .firmCulture_GridLayout {
+    margin-top: 80px;
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(4, 1fr);
@@ -36,12 +37,19 @@
 }
 
 .firmCulture_GridItem {
+    bottom: 0px;
     background-color: white;
     padding: 40px;
     box-sizing: border-box;
     border-radius: 20px;
     box-shadow: 0 0 5px 5px #efefef;
     position: relative;
+    transition: bottom 0.25s;
+    -webkit-transition: bottom 0.25s/* Safari */
+}
+
+.firmCulture_GridItem:hover {
+    bottom: 20px;
 }
 
 .gridItem_Icon {
@@ -80,7 +88,7 @@
 }
 
 .gridItem_Num {
-    font-size: 80px;
+    font-size: 100px;
     color: rgba(3, 78, 183, 0.03);
     font-weight: 700;
     height: 200px;
