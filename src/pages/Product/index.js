@@ -77,8 +77,8 @@ const Product = () => {
                                 {productList.map((item, index) => (
                                     <div className='productList_Border' key={index}>
                                         <div style={{ overflow: "hidden" }}>
-                                            <img src={item.url} alt={item.name} onClick={() => navigate(`/about/firmhonor/${pageIndex * 8 + index}`, {
-                                                state: { itemData: item }
+                                            <img src={item.url} alt={item.name} onClick={() => navigate(`/product_detail/${pageIndex * 8 + index}`, {
+                                                state: { productId: item.id }
                                             })} />
                                         </div>
                                         <div style={{ border: "none" }}>{item.name}</div>

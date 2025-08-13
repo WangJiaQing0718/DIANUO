@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { useEffect, useRef, useState } from 'react';
 import { getNavBarList } from '../../store/modules/navBarStore'
 import './index.scss'
@@ -17,22 +17,31 @@ const NavBar = () => {
 
     // 当前是否为移动端
     const { isMobile } = useContext(DeviceContext);
+    const location = useLocation();
+    // console.log("loc:", location.state);
+
 
     // 当前导航栏是否透明
     const [isTransparent, setIsTransparent] = useState(true)
+
     // 页面滑动距离
     const [scrollTopHeight, setScrollTopHeight] = useState(0);
     useEffect(() => {
-        const handleScroll = () => {
-            const currentScrollTop = document.documentElement.scrollTop;
-            setScrollTopHeight(currentScrollTop);
-            setIsTransparent(currentScrollTop === 0);
-        };
-        window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, [scrollTopHeight]);
+        if (location.state !== null) {
+            setIsTransparent(false);
+        }
+        else {
+            const handleScroll = () => {
+                const currentScrollTop = document.documentElement.scrollTop;
+                setScrollTopHeight(currentScrollTop);
+                setIsTransparent(currentScrollTop === 0);
+            };
+            window.addEventListener("scroll", handleScroll);
+            return () => {
+                window.removeEventListener("scroll", handleScroll);
+            };
+        }
+    }, [scrollTopHeight, location]);
 
 
     // 记录鼠标悬停导航项的索引
@@ -110,7 +119,7 @@ const NavBar = () => {
 
     // 修复下滑距离不为0时，鼠标移动导致的样式错误
     const mouseLeaveChange = () => {
-        if (scrollTopHeight === 0) {
+        if (scrollTopHeight === 0 && location.state === null) {
             setIsTransparent(true);
         }
     }
@@ -121,7 +130,9 @@ const NavBar = () => {
             <div className="navbar-container"
                 onMouseEnter={() => setIsTransparent(false)}
                 onMouseLeave={() => mouseLeaveChange()}
-                style={{ backgroundColor: isMobile ? '#ffffff' : (isTransparent ? 'transparent' : '#ffffff') }}
+                style={{ backgroundColor: isMobile ? '#ffffff' : (isTransparent ? 'transparent' : '#ffffff'),
+                    boxShadow: isTransparent ? '' : '0 3px 5px #e0e0e0'
+                 }}
             >
                 <div className='navbar-box'>
                     {/* 图标 */}

@@ -63,7 +63,7 @@ const PageMidNav = () => {
             }
         }
         setRouterLink(routerLinkArray);
-        console.log("routerLink:", routerLink);
+        // console.log("routerLink:", routerLink);
     }, [navBarList, location.pathname]);
 
     if (navBarList.length === 0) {

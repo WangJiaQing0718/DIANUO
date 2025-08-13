@@ -11,6 +11,7 @@ import FirmIntroduction from "@/pages/About/FirmIntroduction";
 import FirmHoner from "@/pages/About/FirmHonor";
 import FirmPartner from "@/pages/About/FirmPartner";
 import FirmCulture from "@/pages/About/FirmCulture";
+import ProductDetail from "@/pages/Product/detail";
 
 // 页面路由
 const router = createBrowserRouter([
@@ -73,6 +74,10 @@ const router = createBrowserRouter([
         element: <Error />
       }
     ]
+  },
+  {
+    path: '/product_detail/:id',
+    element: <ProductDetail/>
   },
   {
     path: '/service',
