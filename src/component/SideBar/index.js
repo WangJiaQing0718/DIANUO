@@ -19,7 +19,7 @@ const SideBar = () => {
             }
         }
         fetchURL();
-    })
+    },[])
 
     // 设置导航栏打开状态
     const [sidebarVisible, setSidebarVisible] = useState(Array(sideBarNum).fill(false));

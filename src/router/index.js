@@ -12,6 +12,11 @@ import FirmHoner from "@/pages/About/FirmHonor";
 import FirmPartner from "@/pages/About/FirmPartner";
 import FirmCulture from "@/pages/About/FirmCulture";
 import ProductDetail from "@/pages/Product/detail";
+import ALL from "@/pages/Product/all";
+import FXY from "@/pages/Product/fxy";
+import SJ from "@/pages/Product/sj";
+import HC from "@/pages/Product/hc";
+import Other from "@/pages/Product/other";
 
 // 页面路由
 const router = createBrowserRouter([
@@ -54,20 +59,24 @@ const router = createBrowserRouter([
     element: <Product />,
     children: [
       {
+        index: true,
+        element: <ALL />
+      },
+      {
         path: 'fxy',
-        element: <Error />
+        element: <FXY />
       },
       {
         path: 'sj',
-        element: <Error />
+        element: <SJ />
       },
       {
         path: 'hc',
-        element: <Error />
+        element: <HC />
       },
       {
         path: 'other',
-        element: <Error />
+        element: <Other />
       },
       {
         path: 'newproduct',

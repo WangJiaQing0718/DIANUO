@@ -131,3 +131,135 @@
     font-size: 16px;
     font-weight: 500;
 }
+
+
+.productDetail_Detail {
+    // border: 1px solid red;
+}
+
+.productDetail_TitleStyle {
+    margin-bottom: 20px;
+    padding: 9px 0px;
+    // border: 1px solid red
+
+    border-bottom: 2px solid #2f9ade;
+}
+
+.productDetail_TitleStyle span {
+    color: #ffffff;
+    background-color: #2f9ade;
+    font-size: 16px;
+    padding: 10px 30px;
+    box-sizing: border-box;
+}
+
+.productDetail_Table {
+    text-align: center;
+    margin-bottom: 20px;
+
+    table {
+        width: 100%;
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    td,
+    th {
+        border: 1px solid #cccccc;
+        height: 40px;
+    }
+}
+
+.detailData_item1 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 32px;
+}
+
+.detailData_item2 {
+    font-size: 16px;
+    line-height: 32px;
+    color: #74777C;
+}
+
+.productDetail_Keys {
+    margin: 50px 0px;
+    display: flex;
+    align-items: center;
+
+    span {
+        margin: 10px;
+    }
+}
+
+.productDetail_InputGridLayout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+
+    input {
+        height: 50px;
+        width: 100%;
+        border: 1px solid #ced4da;
+        padding-left: 10px;
+    }
+}
+
+.productDetail_Input {
+    margin: 20px 0px;
+
+    input {
+        height: 200px;
+        width: 100%;
+        border: 1px solid #ced4da;
+        padding-left: 10px;
+    }
+}
+
+#InputButton {
+    margin-bottom: 50px;
+    background-color: #2f9ade;
+    height: 50px;
+    color: #ffffff;
+    width: 200px;
+    font-size: 16px;
+    border-radius: 50px;
+    border: none;
+}
+
+.productDetail_MoreGridLayout {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    @media (max-width: 1200px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+    gap: 20px;
+    margin-bottom: 20px;
+
+    #more_product_item {
+        border: 1px solid #ced4da;
+        text-align: center;
+        padding: 10px;
+    }
+
+    #more_product_title {
+        border: none;
+        line-height: 50px;
+        text-align: center;
+
+        border-top: 1px solid #ced4da;
+    }
+
+    img {
+        width: auto;
+        height: 350px;
+        object-fit: cover;
+    }
+}
