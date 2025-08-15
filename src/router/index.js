@@ -17,6 +17,7 @@ import FXY from "@/pages/Product/fxy";
 import SJ from "@/pages/Product/sj";
 import HC from "@/pages/Product/hc";
 import Other from "@/pages/Product/other";
+import NewProduct from "@/pages/Product/newPro";
 
 // 页面路由
 const router = createBrowserRouter([
@@ -80,7 +81,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'newproduct',
-        element: <Error />
+        element: <NewProduct />
       }
     ]
   },

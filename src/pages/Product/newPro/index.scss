@@ -1,0 +1,36 @@
+.newProduct_Container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    // border: 1px solid red;
+}
+
+.newProduct_Content {
+    width: 90%;
+    max-width: 1600px;
+    margin: 50px 0px;
+    // border: 1px solid red;
+}
+
+.newProduct_head {
+    font-size: 44px;
+    font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+    line-height: 50px;
+    font-weight: 700;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.newProduct_video {
+    text-align: center;
+    margin: 0px auto;
+    video {
+        width: 90%;
+        height: auto;
+        max-width: 1000px;
+    }
+}

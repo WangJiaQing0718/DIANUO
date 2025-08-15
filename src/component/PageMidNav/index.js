@@ -27,6 +27,12 @@ const PageMidNav = () => {
 
     //在数据加载完成后解析路由
     useLayoutEffect(() => {
+
+        // console.log("location:",location);
+        if(location.pathname === "/product" || location.pathname === "/news"){
+           setCurrentIndex(null);             
+        }
+        
         if (navBarList.length === 0) return;
 
         const routerArray = location.pathname.split("/").slice(1);

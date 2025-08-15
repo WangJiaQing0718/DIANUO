@@ -7,18 +7,13 @@ const Other = () => {
     const [pageIndex, setPageIndex] = useState(0);
     const [totalNum, setTotalNum] = useState(0);
     const [productList, setProductList] = useState([]);
-    const [loading, setLoading] = useState(true);
 
     const navigate = useNavigate();
 
     useLayoutEffect(() => {
         const fetchURL = async () => {
             try {
-                setLoading(true);
-
-                const res = await axios.get(
-                    "http://nas.wjq718.fun:10025/product-type/4"
-                );
+                const res = await axios.get("http://nas.wjq718.fun:10025/product-type/4");
 
                 if (res.data?.data && Array.isArray(res.data.data)) {
                     setProductList(res.data.data);
@@ -45,19 +40,19 @@ const Other = () => {
                 if (cachedTotalNum) {
                     setTotalNum(JSON.parse(cachedTotalNum));
                 }
-            } finally {
-                setLoading(false);
             }
         };
-
         fetchURL();
     }, [pageIndex]);
 
     return (
         <div className="productList_Container">
             <div className="productList_Content">
-                {loading ? (
-                    <div className="loading">加载中...</div>
+                {productList.length === 0 ? (
+                    <div style={{ textAlign: "center", margin: "25px 0px"}}>
+                        <img src="http://nas.wjq718.fun:10001/imageFiles/h37kcb1np9lxrg2m.png" alt=""></img>
+                        <div>暂无数据</div>
+                    </div>
                 ) : (
                     <div>
                         <div className='productList'>
