@@ -18,6 +18,9 @@ import SJ from "@/pages/Product/sj";
 import HC from "@/pages/Product/hc";
 import Other from "@/pages/Product/other";
 import NewProduct from "@/pages/Product/newPro";
+import AfterSale from "@/pages/Service/aftersale";
+import Video from "@/pages/Service/video";
+import Requirement from "@/pages/Recruit/requirement";
 
 // 页面路由
 const router = createBrowserRouter([
@@ -95,11 +98,11 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Error />
+        element: <AfterSale />
       },
       {
         path: 'aftersale',
-        element: <Error />
+        element: <AfterSale />
       },
       {
         path: 'download',
@@ -107,7 +110,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'video',
-        element: <Error />
+        element: <Video />
       }
     ]
   },
@@ -139,11 +142,11 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Error />
+        element: <Requirement />
       },
       {
         path: 'requirement',
-        element: <Error />
+        element: <Requirement />
       },
       {
         path: 'position',

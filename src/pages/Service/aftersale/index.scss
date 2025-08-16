@@ -1,0 +1,95 @@
+.afterSale_Container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    // border: 1px solid red;
+}
+
+.afterSale_Content {
+    width: 90%;
+    max-width: 1600px;
+    margin: 50px 0px;
+    // border: 1px solid red;
+}
+
+.afterSale_head {
+    font-size: 44px;
+    font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+    line-height: 50px;
+    font-weight: 700;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    border-bottom: 1px dotted #b3b3b3;
+}
+
+.afterSale_GridLayout {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+
+    .afterSale_GridItem {
+        width: 100%;
+        height: auto;
+        border-top: 2px solid #2f9ade;
+        text-align: center;
+        background-color: #f7f8fa;
+        padding: 50px 0px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+
+        position: relative;
+        bottom: -20px;
+        transition: bottom 0.75s;
+        margin-bottom: 20px;            //解决移动端hover状态Item重合
+
+
+        svg {
+            fill: #2f9ade;
+            width: 70px;
+            height: 65px;
+            margin: 0px auto;
+            transition: transform 0.5s ease;
+            transform: rotateY(0deg);
+        }
+
+        div {
+            font-size: 25px;
+            line-height: 50px;
+            margin-top: 20px;
+        }
+    }
+
+    .afterSale_GridItem:hover {
+        border-top: 2px solid #2f9ade;
+        text-align: center;
+        background-color: #2f9ade;
+        padding: 50px 0px;
+        border-radius: 15px;
+        bottom: 0px;
+
+        svg {
+            fill: #ffffff;
+            width: 70px;
+            height: 65px;
+            margin: 0px auto;
+            animation: rotateHalf 0.5s ease;
+            transform: rotateY(180deg);
+        }
+
+        div {
+            font-size: 25px;
+            line-height: 50px;
+            margin-top: 20px;
+            color: #ffffff;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+.requirement_Container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    // border: 1px solid red;
+}
+
+.requirement_Content {
+    width: 90%;
+    max-width: 1600px;
+    // border: 1px solid red;
+}
+
+.requirement_GridLayout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+
+    margin: 100px 0px;
+    background-color: #f2f2f2;
+}
+
+.requirement_Item1 {
+    margin: auto;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+.requirement_Item2 {
+
+    padding: 30px 50px;
+    display: flex;
+    display: grid;
+    align-content: center;
+    min-height: 200px;
+
+    div:first-child {
+        font-size: 28px;
+        color: #2F9ADE;
+        line-height: 42px;
+        margin: 10px 0px;
+    }
+
+    div:last-child {
+        font-size: 16px;
+        color: #333333;
+        line-height: 32px;
+        margin: 10px 0px;
+    }
+}
