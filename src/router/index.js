@@ -21,6 +21,7 @@ import NewProduct from "@/pages/Product/newPro";
 import AfterSale from "@/pages/Service/aftersale";
 import Video from "@/pages/Service/video";
 import Requirement from "@/pages/Recruit/requirement";
+import Position from "@/pages/Recruit/position";
 
 // 页面路由
 const router = createBrowserRouter([
@@ -150,7 +151,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'position',
-        element: <Error />
+        element: <Position />
       }
     ]
   },

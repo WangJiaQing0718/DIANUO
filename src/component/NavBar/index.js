@@ -5,7 +5,6 @@ import './index.scss'
 import { useDispatch, useSelector } from 'react-redux';
 import { useContext } from "react"
 import { DeviceContext } from "@/deviceContext"
-// import SideBar from "@/component/SideBar"
 
 const NavBar = () => {
     // 获取路由数据

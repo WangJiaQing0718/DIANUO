@@ -1,0 +1,82 @@
+.position_Container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.position_Content {
+    width: 90%;
+    max-width: 1600px;
+    margin: 50px 0px;
+    // border: 1px solid red;
+}
+
+.position_GridLayout {
+    margin: 20px 0px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.position_GridItem {
+    background-color: #f6f6f6;
+    border-radius: 15px;
+    padding: 50px 35px;
+    box-shadow: 0 0 5px 0px #e0e0e0;
+    transition: box-shadow 0.25s;
+
+    #div1 {
+        font-size: 24px;
+        color: #212529;
+        line-height: 36px;
+    }
+
+    #div2 {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #666666;
+        line-height: 24px;
+    }
+
+    #div3 {
+        margin-top: 30px;
+        font-size: 16px;
+        color: #666666;
+        line-height: 26px;
+    }
+
+    #div4 {
+        font-size: 16px;
+        color: #666666;
+        line-height: 26px;
+
+        display: inline-block;
+        max-width: 20vw;
+
+        @media (max-width: 768px) {
+            max-width: 80vw;
+        }
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.position_GridItem:hover {
+    box-shadow: 0 0 5px 5px #e0e0e0;
+    
+    #div1,
+    #div2,
+    #div3,
+    #div4 {
+        color: #2e98dc;
+    }
+}
