@@ -67,9 +67,7 @@ const FirmHoner = () => {
                             {honerPicList.map((item, index) => (
                                 <div className='picBorder' key={index}>
                                     <div style={{ overflow: "hidden" }}>
-                                        <img src={item.purl} alt={item.pname} onClick={() => navigate(`/about/firmhonor/${pageIndex * 8 + index}`, {
-                                            state: { itemData: item }
-                                        })} />
+                                        <img src={item.purl} alt={item.pname}/>
                                     </div>
                                     <div style={{ border: "none" }}>{item.pname}</div>
                                 </div>

@@ -1,4 +1,3 @@
-// 导航栏列表内容
 import { createSlice } from '@reduxjs/toolkit'
 import axios from 'axios'
 

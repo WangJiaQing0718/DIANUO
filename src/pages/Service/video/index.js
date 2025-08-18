@@ -1,59 +1,79 @@
-import { useLayoutEffect, useState } from 'react'
+import { useEffect, useLayoutEffect, useState } from 'react'
 import './index.scss'
 import axios from 'axios'
 import Pagination from '@/component/Pagination';
+import { useDispatch, useSelector } from 'react-redux';
+import { getServiceVideoList } from '@/store/modules/serviceVideoStore';
 
 const Video = () => {
 
-    // 获取图片数据
-    const [pageIndex, setPageIndex] = useState(0);
-    const [totalNum, setTotalNum] = useState(0);
-    const [videoList, setVideoList] = useState([])
+    const dispatch = useDispatch();
+    const {
+        serviceVideoList,
+        total_count,
+        currentPage,
+        pageSize
+    } = useSelector(state => state.serviceVideo);
 
-    useLayoutEffect(() => {
-        const fetchURL = async () => {
-            try {
-                const res = await axios.get(
-                    `http://nas.wjq718.fun:10025/service-video?skip=${pageIndex * 6}&limit=6`
-                );
+    // 初始加载数据
+    useEffect(() => {
+        dispatch(getServiceVideoList(currentPage));
+    }, [dispatch, currentPage]);
 
-                if (res.data?.data && Array.isArray(res.data.data)) {
-                    setVideoList(res.data.data);
-                    // console.log("res:",res.data.data);
+    // 处理页码变化
+    const handlePageChange = (newPage) => {
+        dispatch(getServiceVideoList(newPage));
+    };
 
-                    setTotalNum(res.data.total_count);
+    // // 获取视频数据
+    // const [pageIndex, setPageIndex] = useState(0);
+    // const [totalNum, setTotalNum] = useState(0);
+    // const [videoList, setVideoList] = useState([])
 
-                    // 缓存数据
-                    localStorage.setItem('videoList', JSON.stringify(res.data.data));
-                    localStorage.setItem('totalNum', JSON.stringify(res.data.total_count));
-                } else {
-                    throw new Error('Invalid data format from API');
-                }
-            } catch (error) {
-                console.error('Error fetching URL:', error);
+    // useLayoutEffect(() => {
+    //     const fetchURL = async () => {
+    //         try {
+    //             const res = await axios.get(
+    //                 `http://nas.wjq718.fun:10025/service-video?skip=${pageIndex * 6}&limit=6`
+    //             );
 
-                // 尝试从缓存加载
-                const cachedVideoList = localStorage.getItem('videoList');
-                const cachedTotalNum = localStorage.getItem('totalNum');
+    //             if (res.data?.data && Array.isArray(res.data.data)) {
+    //                 setVideoList(res.data.data);
+    //                 // console.log("res:",res.data.data);
 
-                if (cachedVideoList) {
-                    setVideoList(JSON.parse(cachedVideoList));
-                }
-                if (cachedTotalNum) {
-                    setTotalNum(JSON.parse(cachedTotalNum));
-                }
-            }
-        };
+    //                 setTotalNum(res.data.total_count);
 
-        fetchURL();
-    }, [pageIndex]);
+    //                 // 缓存数据
+    //                 localStorage.setItem('videoList', JSON.stringify(res.data.data));
+    //                 localStorage.setItem('totalNum', JSON.stringify(res.data.total_count));
+    //             } else {
+    //                 throw new Error('Invalid data format from API');
+    //             }
+    //         } catch (error) {
+    //             console.error('Error fetching URL:', error);
+
+    //             // 尝试从缓存加载
+    //             const cachedVideoList = localStorage.getItem('videoList');
+    //             const cachedTotalNum = localStorage.getItem('totalNum');
+
+    //             if (cachedVideoList) {
+    //                 setVideoList(JSON.parse(cachedVideoList));
+    //             }
+    //             if (cachedTotalNum) {
+    //                 setTotalNum(JSON.parse(cachedTotalNum));
+    //             }
+    //         }
+    //     };
+
+    //     fetchURL();
+    // }, [pageIndex]);
 
     return (
         <div className='video-Container'>
             <div className='video-Content'>
                 <div className='video-Display'>
                     {
-                        videoList.map(item =>
+                        serviceVideoList.map(item =>
                             <div className='video-Box'>
                                 <div>
                                     <video controls>
@@ -69,9 +89,9 @@ const Video = () => {
 
                 <div className="pagination-wrapper">
                     <Pagination
-                        pageIndex={pageIndex}
-                        totalPage={Math.ceil(totalNum / 6)}
-                        onPageChange={(newPage) => setPageIndex(newPage)}
+                        pageIndex={currentPage}
+                        totalPage={Math.ceil(total_count / pageSize)}
+                        onPageChange={(newPage) => handlePageChange(newPage)}
                     />
                 </div>
             </div>

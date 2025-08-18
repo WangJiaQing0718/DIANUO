@@ -36,7 +36,7 @@ const ProductDetail = () => {
                 setLoading(true);
                 const res = await axios.get(`http://nas.wjq718.fun:10025/product/${productId}`);
                 setProductData(res.data);
-                console.log("res:", res.data);
+                // console.log("res:", res.data);
 
                 if (res.data.models !== null) {
                     setDetailTable(true);
@@ -44,10 +44,10 @@ const ProductDetail = () => {
 
                 if (res.data.features !== null) {
                     const dData = Object.entries(res.data.features);
-                    console.log(dData);
+                    // console.log(dData);
                     setDetailData(dData);
                 }
-                console.log("detailData:", detailData);
+                // console.log("detailData:", detailData);
 
                 localStorage.setItem('productData', JSON.stringify(res.data.data));
             } catch (error) {

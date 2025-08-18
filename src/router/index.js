@@ -22,6 +22,7 @@ import AfterSale from "@/pages/Service/aftersale";
 import Video from "@/pages/Service/video";
 import Requirement from "@/pages/Recruit/requirement";
 import Position from "@/pages/Recruit/position";
+import JobDetail from "@/pages/Recruit/jobdetail";
 
 // 页面路由
 const router = createBrowserRouter([
@@ -154,6 +155,10 @@ const router = createBrowserRouter([
         element: <Position />
       }
     ]
+  },
+  {
+    path: '/job_detail/:id',
+    element: <JobDetail/>
   },
   {
     path: '/contact',

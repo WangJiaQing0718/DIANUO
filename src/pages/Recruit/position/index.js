@@ -3,9 +3,11 @@ import './index.scss'
 import { useDispatch, useSelector } from 'react-redux';
 import { getRecruitPositionList } from '@/store/modules/recruitPositionStore';
 import Pagination from '@/component/Pagination';
+import { useNavigate } from 'react-router-dom';
 
 
 const Position = () => {
+    const navigate = useNavigate();
     const [pageIndex, setPageIndex] = useState(0);
     const { recruitPositionList, count } = useSelector(state => state.recruitPosition)
     const dispatch = useDispatch()
@@ -21,8 +23,8 @@ const Position = () => {
                 <div className='position_GridLayout'>
 
                     {
-                        recruitPositionList.map(item => (
-                            <div className='position_GridItem'>
+                        recruitPositionList.map((item, index) => (
+                            <div className='position_GridItem' onClick={() => navigate(`/job_detail/${index + 1}`)}>
                                 <div id='div1'>{item.position_name}</div>
                                 <div id='div2'>招聘部门：{item.recruit_department}</div>
                                 <div id='div3'>岗位职责：</div>

@@ -16,7 +16,7 @@ const PageMidNav = () => {
     const { navBarList } = useSelector(state => state.navBar);      // 所有路由数据
     const [pageList, setPageList] = useState([]);                   // 中部导航栏数据
     const [routerLink, setRouterLink] = useState([]);               // 路由链……>……>
-    const [currentIndex, setCurrentIndex] = useState(0);            // 当前页面路由索引
+    const [currentIndex, setCurrentIndex] = useState(null);            // 当前页面路由索引
     const [currentFirstPath, setcurrentFirstPath] = useState();     // 一级路由路径
 
 
@@ -27,12 +27,11 @@ const PageMidNav = () => {
 
     //在数据加载完成后解析路由
     useLayoutEffect(() => {
-
         // console.log("location:",location);
-        if(location.pathname === "/product" || location.pathname === "/news"){
-           setCurrentIndex(null);             
+        if (location.pathname === "/product" || location.pathname === "/news") {
+            setCurrentIndex(null);
         }
-        
+
         if (navBarList.length === 0) return;
 
         const routerArray = location.pathname.split("/").slice(1);
@@ -42,7 +41,14 @@ const PageMidNav = () => {
         const result = { childArray: null, currentData: null };
 
         // 一级路由匹配
-        const childArrayRes = navBarList.find(item => item.path === routerArray[0]);
+        var childArrayRes = null;
+        
+        // 解决招聘详情页数据路由数据问题
+        if (routerArray[0] === 'job_detail') {
+            childArrayRes = navBarList.find(item => item.path === 'recruit');
+        } else {
+            childArrayRes = navBarList.find(item => item.path === routerArray[0]);
+        }
         // console.log("childArrayRes:", childArrayRes);
 
         if (childArrayRes) {
@@ -55,14 +61,18 @@ const PageMidNav = () => {
             const firstRouter = { name: childArrayRes.name, path: childArrayRes.path };
             setRouterLink([...routerLink, firstRouter]);
 
-            // 二级路由匹配
-            if (routerArray.length > 1) {
+            // 二级路由匹配()
+            if (routerArray.length > 1 && routerArray[0] !== 'job_detail') {
                 const currentDataRes = childArrayRes.child.find(child => child.cpath === routerArray[1]);
                 const currentIndex = childArrayRes.child.findIndex(child => child.cpath === routerArray[1]);
                 result.currentData = currentDataRes;
-                setCurrentIndex(currentIndex);
+                if (routerArray[0] === 'job_detail') {
+                    setCurrentIndex(null);
+                } else {
+                    setCurrentIndex(currentIndex);
+                }
                 // console.log("currentIndex:", currentIndex);
-                // console.log("currentDataRes:",currentDataRes);
+                // console.log("currentDataRes:", currentDataRes);
 
                 // 路由链参数二
                 routerLinkArray.push({ name: currentDataRes.cname, path: currentDataRes.cpath });
@@ -115,7 +125,6 @@ const PageMidNav = () => {
                             )
                         }
                     </div>
-
                 </div>
             </div>
         </div>
