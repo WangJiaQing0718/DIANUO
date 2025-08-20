@@ -5,7 +5,7 @@ const serviceVideoStore = createSlice({
     name: 'serviceVideo',
     initialState: {
         serviceVideoList: [],
-        total_count: 0,
+        total_count: null,
         currentPage: 0,
         pageSize: 6
     },
@@ -26,13 +26,13 @@ const serviceVideoStore = createSlice({
 const { setServiceVideoList, setCount, setCurrentPage } = serviceVideoStore.actions
 
 // 异步请求数据
-const getServiceVideoList = (pageIndex = 0) => {
+const getServiceVideoList = (pageIndex) => {
     return async (dispatch) => {
         const res = await axios.get(`http://nas.wjq718.fun:10025/service-video?skip=${pageIndex * 6}&limit=6`)
         // console.log("res：", res.data.data);
         dispatch(setServiceVideoList(res.data.data))
         dispatch(setCount(res.data.total_count))
-        dispatch(setCurrentPage(pageIndex))  // 更新当前页码
+        dispatch(setCurrentPage(pageIndex))
     }
 }
 

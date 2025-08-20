@@ -23,6 +23,10 @@ import Video from "@/pages/Service/video";
 import Requirement from "@/pages/Recruit/requirement";
 import Position from "@/pages/Recruit/position";
 import JobDetail from "@/pages/Recruit/jobdetail";
+import NewsList from "@/pages/News/newsList";
+import FirmNews from "@/pages/News/firmnews";
+import IndustryNews from "@/pages/News/industrynews";
+import MediaNews from "@/pages/News/medianews";
 
 // 页面路由
 const router = createBrowserRouter([
@@ -122,19 +126,19 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Error />
+        element: <NewsList />
       },
       {
         path: 'firmnews',
-        element: <Error />
+        element: <FirmNews />
       },
       {
         path: 'industrynews',
-        element: <Error />
+        element: <IndustryNews />
       },
       {
         path: 'medianews',
-        element: <Error />
+        element: <MediaNews />
       }
     ]
   },

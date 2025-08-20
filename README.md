@@ -1,9 +1,10 @@
 # 使用IPV6网络访问，IPV4网络无法获取URL资源和数据
 
 ###  1、使用库
-npm i @reduxjs/toolkit react-redux
-npm i -D @craco/craco
-npm install axios --save
+1、npm i @reduxjs/toolkit react-redux
+2、npm i -D @craco/craco
+3、npm install axios --save
+4、npm install dayjs --save
 
 ### 2、后端使用
 1、导航栏、底部栏路由信息从后端获取
@@ -13,7 +14,6 @@ npm install axios --save
 
 ### 3、FastAPI 文档
 http://nas.wjq718.fun:10025/docs
-
 
 ## 部分组件、页面设计思路
 
