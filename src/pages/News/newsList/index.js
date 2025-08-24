@@ -1,7 +1,8 @@
-import { useEffect } from 'react';
+import { useLayoutEffect } from 'react';
 import './index.scss'
 import { useDispatch, useSelector } from 'react-redux';
 import { getNewsList } from '@/store/modules/newsListStore';
+import { setLastData, setNextData } from '@/store/modules/latestNewsStore';
 import Pagination from '@/component/Pagination';
 import dayjs from 'dayjs';
 import { useNavigate } from 'react-router-dom';
@@ -17,15 +18,36 @@ const NewsList = () => {
 
     const dispatch = useDispatch()
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         dispatch(getNewsList(currentPage))
     }, [dispatch, currentPage])
-    console.log("newsList:", newsList);
+    // console.log("newsList:", newsList);
 
     // 处理页码变化
     const handlePageChange = (newPage) => {
         dispatch(getNewsList(newPage));
     };
+
+    const linkToDetail = (idx, id) => {
+        // console.log("idx:", idx);
+        // console.log("id:", id);
+        if (idx > 0) {
+            // console.log("last:",newsList[idx-1]);
+            dispatch(setLastData(newsList[idx-1]));
+        }else{
+            dispatch(setLastData(null));
+        }
+        if (idx < newsList.length-1) {
+            dispatch(setNextData(newsList[idx+1]));
+        }else{
+            dispatch(setNextData(null));
+        }
+        if (newsList[idx].news_content.news_url === null) {
+            navigate(`/news_detail/${id}`);
+        } else {
+            window.open(`${newsList[idx].news_content.news_url.url}`, '_self');
+        }
+    }
 
     return (
         <div className='newsList_Container'>
@@ -33,7 +55,7 @@ const NewsList = () => {
                 <div>
                     {
                         newsList?.map((item, index) => (
-                            <div className='grid_Layout'>
+                            <div className='grid_Layout' onClick={() => linkToDetail(index, item.id)}>
                                 <div id='item1'>
                                     <div>
                                         {dayjs(item.create_time).format("DD")}

@@ -47,7 +47,7 @@ const FirmIntro = () => {
                 <div className='FirmIntro_item'>
                     <div className='FirmIntro_AboutText'>ABOUT</div>
                     <div className='FirmIntro_Title'>
-                        <div>南京典诺生物技术有限公司</div>
+                        <div id='title1'>南京典诺生物技术有限公司</div>
                         <div>南京典诺生物技术有限公司创建于2015年6月，公司总部坐落于六朝古都江苏省南京市，是一家集自主创新研发、规模化生产及专业化营销为一体的体外诊断仪器和试剂供应商，涉及关键技术已申请并获得国家专利，于2020年通过国家高新技术企业认证。</div>
                         <div>公司现有电解质分析仪（DIANUO-80系列、DN-X系列）、电解质分析仪配套试剂、离子选择性电极三大类产品，以其良好的稳定性，广泛应用于各级医院、社区门诊、卫生院、实验室等。</div>
 

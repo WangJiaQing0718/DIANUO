@@ -27,6 +27,7 @@ import NewsList from "@/pages/News/newsList";
 import FirmNews from "@/pages/News/firmnews";
 import IndustryNews from "@/pages/News/industrynews";
 import MediaNews from "@/pages/News/medianews";
+import NewsDetail from "@/pages/News/newsdetail";
 
 // 页面路由
 const router = createBrowserRouter([
@@ -141,6 +142,10 @@ const router = createBrowserRouter([
         element: <MediaNews />
       }
     ]
+  },
+  {
+    path: '/news_detail/:id',
+    element: <NewsDetail/>
   },
   {
     path: '/recruit',

@@ -4,7 +4,10 @@
     background-color: white;
     overflow: hidden;
     margin-top: -100px;
-    padding: 100px 0px;
+    padding: 75px 0px;
+    @media (max-width: 768px) {
+        padding: 10px 0px;
+    }
     display: flex;
     // border: 1px solid red;
 }
@@ -20,7 +23,12 @@
 }
 
 .FirmIntro_item {
-    padding: 50px 0;
+    padding: 20px 0;
+
+    @media (max-width: 768px) {
+        padding: 10px 0px;
+    }
+
     flex: 1;
     min-width: 384px;
     box-sizing: border-box;
@@ -51,32 +59,47 @@
 }
 
 .FirmIntro_AboutText {
-    font-size: 172px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 7vw;
+    top: 12%;
+    @media (max-width: 768px) {
+        top: 5%;
+    }
+    font-family: Arial,
+        Helvetica,
+        sans-serif;
     text-align: left;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 2px rgba(143, 143, 143, 0.1);
-
     z-index: 1;
     position: absolute;
 }
 
 .FirmIntro_Title {
     margin-top: 120px;
+    @media (max-width: 768px) {
+        margin-top: 30px;
+    }
+
     text-align: left;
     margin-right: 50px;
-
-    .FirmIntro_Title div:first-child {
-        font-size: 48px;
-        font-weight: 700;
-        margin-bottom: 30px;
-        color: rgb(16, 16, 16);
-    }
 
     div {
         color: rbg(71, 71, 71);
         font-size: 16px;
         line-height: 32px;
+    }
+
+    #title1 {
+        font-size: 3vw;
+        display: flex;
+        @media (max-width: 768px) {
+            font-size: 20px;
+            flex-wrap: wrap;
+        }
+
+        font-weight: 700;
+        margin-bottom: 30px;
+        color: rgb(16, 16, 16);
     }
 }
 
@@ -90,12 +113,22 @@
     div {
         span:first-child {
             font-size: 54px;
+
+            @media (max-width:768px) {
+                font-size: 27px;
+            }
+
             color: rgb(47, 155, 224);
             font-weight: 700;
         }
 
         span:last-child {
             font-size: 16px;
+
+            @media (max-width:768px) {
+                font-size: 12px;
+            }
+
             color: rgb(47, 155, 224);
         }
 

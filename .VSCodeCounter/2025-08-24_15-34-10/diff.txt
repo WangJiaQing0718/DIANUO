@@ -1,0 +1,65 @@
+Date : 2025-08-24 15:34:10
+Directory : e:\dianuo\src
+Total : 21 files,  1186 codes, 24 comments, 203 blanks, all 1413 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| SCSS       |          8 |        651 |         43 |        128 |        822 |
+| JavaScript |         13 |        535 |        -19 |         75 |        591 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++--------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                             | files      | code       | comment    | blank      | total      |
++--------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                |         21 |      1,186 |         24 |        203 |      1,413 |
+| component                                        |          2 |         34 |          2 |          4 |         40 |
+| component\NavBar                                 |          1 |         28 |          2 |          6 |         36 |
+| component\PageMidNav                             |          1 |          6 |          0 |         -2 |          4 |
+| pages                                            |         13 |      1,022 |         10 |        178 |      1,210 |
+| pages\Home                                       |          2 |         38 |          1 |          8 |         47 |
+| pages\Home\FirmIntro                             |          1 |         26 |          0 |          7 |         33 |
+| pages\Home\SlideShow                             |          1 |         12 |          1 |          1 |         14 |
+| pages\News                                       |         10 |        985 |         44 |        178 |      1,207 |
+| pages\News\firmnews                              |          2 |        197 |         10 |         34 |        241 |
+| pages\News\industrynews                          |          2 |        197 |         10 |         34 |        241 |
+| pages\News\medianews                             |          2 |        197 |         10 |         34 |        241 |
+| pages\News\newsList                              |          2 |        204 |         10 |         36 |        250 |
+| pages\News\newsdetail                            |          2 |        190 |          4 |         40 |        234 |
+| pages\Service                                    |          1 |         -1 |        -35 |         -8 |        -44 |
+| pages\Service\video                              |          1 |         -1 |        -35 |         -8 |        -44 |
+| router                                           |          1 |          9 |          0 |          0 |          9 |
+| store                                            |          5 |        121 |         12 |         21 |        154 |
+| store (Files)                                    |          1 |          8 |          0 |          0 |          8 |
+| store\modules                                    |          4 |        113 |         12 |         21 |        146 |
++--------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++--------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                         | language   | code       | comment    | blank      | total      |
++--------------------------------------------------+------------+------------+------------+------------+------------+
+| e:\dianuo\src\component\NavBar\index.scss        | SCSS       |         28 |          2 |          6 |         36 |
+| e:\dianuo\src\component\PageMidNav\index.js      | JavaScript |          6 |          0 |         -2 |          4 |
+| e:\dianuo\src\pages\Home\FirmIntro\index.scss    | SCSS       |         26 |          0 |          7 |         33 |
+| e:\dianuo\src\pages\Home\SlideShow\index.scss    | SCSS       |         12 |          1 |          1 |         14 |
+| e:\dianuo\src\pages\News\firmnews\index.js       | JavaScript |         74 |          1 |         11 |         86 |
+| e:\dianuo\src\pages\News\firmnews\index.scss     | SCSS       |        123 |          9 |         23 |        155 |
+| e:\dianuo\src\pages\News\industrynews\index.js   | JavaScript |         74 |          1 |         11 |         86 |
+| e:\dianuo\src\pages\News\industrynews\index.scss | SCSS       |        123 |          9 |         23 |        155 |
+| e:\dianuo\src\pages\News\medianews\index.js      | JavaScript |         74 |          1 |         11 |         86 |
+| e:\dianuo\src\pages\News\medianews\index.scss    | SCSS       |        123 |          9 |         23 |        155 |
+| e:\dianuo\src\pages\News\newsList\index.js       | JavaScript |         81 |          1 |         13 |         95 |
+| e:\dianuo\src\pages\News\newsList\index.scss     | SCSS       |        123 |          9 |         23 |        155 |
+| e:\dianuo\src\pages\News\newsdetail\index.js     | JavaScript |         97 |          0 |         18 |        115 |
+| e:\dianuo\src\pages\News\newsdetail\index.scss   | SCSS       |         93 |          4 |         22 |        119 |
+| e:\dianuo\src\pages\Service\video\index.js       | JavaScript |         -1 |        -35 |         -8 |        -44 |
+| e:\dianuo\src\router\index.js                    | JavaScript |          9 |          0 |          0 |          9 |
+| e:\dianuo\src\store\index.js                     | JavaScript |          8 |          0 |          0 |          8 |
+| e:\dianuo\src\store\modules\latestNewsStore.js   | JavaScript |         16 |          0 |          3 |         19 |
+| e:\dianuo\src\store\modules\newsDetailStore.js   | JavaScript |         28 |          1 |          6 |         35 |
+| e:\dianuo\src\store\modules\newsListStore.js     | JavaScript |         34 |          6 |          6 |         46 |
+| e:\dianuo\src\store\modules\newsTypeStore.js     | JavaScript |         35 |          5 |          6 |         46 |
+| Total                                            |            |      1,186 |         24 |        203 |      1,413 |
++--------------------------------------------------+------------+------------+------------+------------+------------+

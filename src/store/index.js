@@ -5,7 +5,8 @@ import serviceVideoReducer from './modules/serviceVideoStore'
 import jobDetailReducer from './modules/jobDetailStore'
 import newsListReducer from './modules/newsListStore'
 import newsTypeReducer from './modules/newsTypeStore'
-
+import newsDetailReducer from './modules/newsDetailStore'
+import latestNewsReducer from './modules/latestNewsStore' 
 import { configureStore } from '@reduxjs/toolkit'
 
 const store = configureStore({
@@ -15,7 +16,9 @@ const store = configureStore({
         serviceVideo: serviceVideoReducer,
         jobDetail: jobDetailReducer,
         newsList: newsListReducer,
-        newsType: newsTypeReducer
+        newsType: newsTypeReducer,
+        newsDetail: newsDetailReducer,
+        latestNews: latestNewsReducer
     }
 })
 

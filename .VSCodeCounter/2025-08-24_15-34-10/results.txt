@@ -1,0 +1,166 @@
+Date : 2025-08-24 15:34:10
+Directory : e:\dianuo\src
+Total : 89 files,  5731 codes, 259 comments, 1007 blanks, all 6997 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| JavaScript |         51 |      3,050 |        144 |        510 |      3,704 |
+| SCSS       |         36 |      2,635 |        115 |        489 |      3,239 |
+| PostCSS    |          2 |         46 |          0 |          8 |         54 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                  | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                     |         89 |      5,731 |        259 |      1,007 |      6,997 |
+| . (Files)                                             |          5 |         86 |          0 |         17 |        103 |
+| component                                             |         14 |      1,191 |         76 |        204 |      1,471 |
+| component\ButtomBar                                   |          2 |        128 |         14 |         27 |        169 |
+| component\Consultancy                                 |          2 |        167 |          7 |         25 |        199 |
+| component\HeadSection                                 |          2 |         67 |          3 |         14 |         84 |
+| component\NavBar                                      |          2 |        398 |         24 |         70 |        492 |
+| component\PageMidNav                                  |          2 |        178 |         22 |         31 |        231 |
+| component\Pagination                                  |          2 |        125 |          4 |         18 |        147 |
+| component\SideBar                                     |          2 |        128 |          2 |         19 |        149 |
+| pages                                                 |         60 |      4,017 |        154 |        737 |      4,908 |
+| pages\About                                           |         10 |        540 |         26 |        102 |        668 |
+| pages\About (Files)                                   |          2 |         33 |          3 |          6 |         42 |
+| pages\About\FirmCulture                               |          2 |        132 |          3 |         19 |        154 |
+| pages\About\FirmHonor                                 |          2 |        137 |          6 |         25 |        168 |
+| pages\About\FirmIntroduction                          |          2 |         74 |          3 |         18 |         95 |
+| pages\About\FirmPartner                               |          2 |        164 |         11 |         34 |        209 |
+| pages\Contact                                         |          2 |        292 |          8 |         57 |        357 |
+| pages\Error                                           |          2 |        219 |          1 |         35 |        255 |
+| pages\Home                                            |          6 |        441 |         25 |         90 |        556 |
+| pages\Home (Files)                                    |          2 |         44 |          0 |         15 |         59 |
+| pages\Home\FirmIntro                                  |          2 |        202 |          6 |         40 |        248 |
+| pages\Home\SlideShow                                  |          2 |        195 |         19 |         35 |        249 |
+| pages\News                                            |         11 |      1,006 |         44 |        181 |      1,231 |
+| pages\News (Files)                                    |          1 |         21 |          0 |          3 |         24 |
+| pages\News\firmnews                                   |          2 |        197 |         10 |         34 |        241 |
+| pages\News\industrynews                               |          2 |        197 |         10 |         34 |        241 |
+| pages\News\medianews                                  |          2 |        197 |         10 |         34 |        241 |
+| pages\News\newsList                                   |          2 |        204 |         10 |         36 |        250 |
+| pages\News\newsdetail                                 |          2 |        190 |          4 |         40 |        234 |
+| pages\Product                                         |         16 |        985 |         37 |        176 |      1,198 |
+| pages\Product (Files)                                 |          2 |         92 |          3 |         17 |        112 |
+| pages\Product\all                                     |          2 |         75 |          3 |         15 |         93 |
+| pages\Product\detail                                  |          2 |        472 |         17 |         80 |        569 |
+| pages\Product\fxy                                     |          2 |         75 |          3 |         15 |         93 |
+| pages\Product\hc                                      |          2 |         75 |          3 |         15 |         93 |
+| pages\Product\newPro                                  |          2 |         49 |          2 |          6 |         57 |
+| pages\Product\other                                   |          2 |         72 |          3 |         13 |         88 |
+| pages\Product\sj                                      |          2 |         75 |          3 |         15 |         93 |
+| pages\Recruit                                         |          7 |        310 |          6 |         58 |        374 |
+| pages\Recruit (Files)                                 |          1 |         21 |          0 |          3 |         24 |
+| pages\Recruit\jobdetail                               |          2 |        112 |          2 |         22 |        136 |
+| pages\Recruit\position                                |          2 |        110 |          2 |         20 |        132 |
+| pages\Recruit\requirement                             |          2 |         67 |          2 |         13 |         82 |
+| pages\Service                                         |          6 |        224 |          7 |         38 |        269 |
+| pages\Service (Files)                                 |          2 |         22 |          0 |          5 |         27 |
+| pages\Service\aftersale                               |          2 |        112 |          2 |         19 |        133 |
+| pages\Service\video                                   |          2 |         90 |          5 |         14 |        109 |
+| router                                                |          1 |        189 |          2 |          2 |        193 |
+| store                                                 |          9 |        248 |         27 |         47 |        322 |
+| store (Files)                                         |          1 |         22 |          1 |          2 |         25 |
+| store\modules                                         |          8 |        226 |         26 |         45 |        297 |
++-------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                              | language   | code       | comment    | blank      | total      |
++-------------------------------------------------------+------------+------------+------------+------------+------------+
+| e:\dianuo\src\App.css                                 | PostCSS    |         33 |          0 |          6 |         39 |
+| e:\dianuo\src\App.js                                  | JavaScript |          6 |          0 |          2 |          8 |
+| e:\dianuo\src\component\ButtomBar\index.js            | JavaScript |         67 |         12 |         12 |         91 |
+| e:\dianuo\src\component\ButtomBar\index.scss          | SCSS       |         61 |          2 |         15 |         78 |
+| e:\dianuo\src\component\Consultancy\index.js          | JavaScript |         65 |          2 |          7 |         74 |
+| e:\dianuo\src\component\Consultancy\index.scss        | SCSS       |        102 |          5 |         18 |        125 |
+| e:\dianuo\src\component\HeadSection\index.js          | JavaScript |         24 |          1 |          7 |         32 |
+| e:\dianuo\src\component\HeadSection\index.scss        | SCSS       |         43 |          2 |          7 |         52 |
+| e:\dianuo\src\component\NavBar\index.js               | JavaScript |        172 |         17 |         27 |        216 |
+| e:\dianuo\src\component\NavBar\index.scss             | SCSS       |        226 |          7 |         43 |        276 |
+| e:\dianuo\src\component\PageMidNav\index.js           | JavaScript |        107 |         14 |         18 |        139 |
+| e:\dianuo\src\component\PageMidNav\index.scss         | SCSS       |         71 |          8 |         13 |         92 |
+| e:\dianuo\src\component\Pagination\index.js           | JavaScript |         77 |          4 |         11 |         92 |
+| e:\dianuo\src\component\Pagination\index.scss         | SCSS       |         48 |          0 |          7 |         55 |
+| e:\dianuo\src\component\SideBar\index.js              | JavaScript |         86 |          2 |         13 |        101 |
+| e:\dianuo\src\component\SideBar\index.scss            | SCSS       |         42 |          0 |          6 |         48 |
+| e:\dianuo\src\deviceContext.js                        | JavaScript |         18 |          0 |          6 |         24 |
+| e:\dianuo\src\index.css                               | PostCSS    |         13 |          0 |          2 |         15 |
+| e:\dianuo\src\index.js                                | JavaScript |         16 |          0 |          1 |         17 |
+| e:\dianuo\src\pages\About\FirmCulture\index.js        | JavaScript |         48 |          0 |          8 |         56 |
+| e:\dianuo\src\pages\About\FirmCulture\index.scss      | SCSS       |         84 |          3 |         11 |         98 |
+| e:\dianuo\src\pages\About\FirmHonor\index.js          | JavaScript |         76 |          2 |         15 |         93 |
+| e:\dianuo\src\pages\About\FirmHonor\index.scss        | SCSS       |         61 |          4 |         10 |         75 |
+| e:\dianuo\src\pages\About\FirmIntroduction\index.js   | JavaScript |         21 |          0 |          9 |         30 |
+| e:\dianuo\src\pages\About\FirmIntroduction\index.scss | SCSS       |         53 |          3 |          9 |         65 |
+| e:\dianuo\src\pages\About\FirmPartner\index.js        | JavaScript |         78 |          5 |         12 |         95 |
+| e:\dianuo\src\pages\About\FirmPartner\index.scss      | SCSS       |         86 |          6 |         22 |        114 |
+| e:\dianuo\src\pages\About\index.js                    | JavaScript |         20 |          0 |          4 |         24 |
+| e:\dianuo\src\pages\About\index.scss                  | SCSS       |         13 |          3 |          2 |         18 |
+| e:\dianuo\src\pages\Contact\index.js                  | JavaScript |        147 |          3 |         24 |        174 |
+| e:\dianuo\src\pages\Contact\index.scss                | SCSS       |        145 |          5 |         33 |        183 |
+| e:\dianuo\src\pages\Error\index.js                    | JavaScript |         24 |          0 |          5 |         29 |
+| e:\dianuo\src\pages\Error\index.scss                  | SCSS       |        195 |          1 |         30 |        226 |
+| e:\dianuo\src\pages\Home\FirmIntro\index.js           | JavaScript |         64 |          1 |         14 |         79 |
+| e:\dianuo\src\pages\Home\FirmIntro\index.scss         | SCSS       |        138 |          5 |         26 |        169 |
+| e:\dianuo\src\pages\Home\SlideShow\index.js           | JavaScript |        116 |         18 |         24 |        158 |
+| e:\dianuo\src\pages\Home\SlideShow\index.scss         | SCSS       |         79 |          1 |         11 |         91 |
+| e:\dianuo\src\pages\Home\index.js                     | JavaScript |         44 |          0 |         14 |         58 |
+| e:\dianuo\src\pages\Home\index.scss                   | SCSS       |          0 |          0 |          1 |          1 |
+| e:\dianuo\src\pages\News\firmnews\index.js            | JavaScript |         74 |          1 |         11 |         86 |
+| e:\dianuo\src\pages\News\firmnews\index.scss          | SCSS       |        123 |          9 |         23 |        155 |
+| e:\dianuo\src\pages\News\index.js                     | JavaScript |         21 |          0 |          3 |         24 |
+| e:\dianuo\src\pages\News\industrynews\index.js        | JavaScript |         74 |          1 |         11 |         86 |
+| e:\dianuo\src\pages\News\industrynews\index.scss      | SCSS       |        123 |          9 |         23 |        155 |
+| e:\dianuo\src\pages\News\medianews\index.js           | JavaScript |         74 |          1 |         11 |         86 |
+| e:\dianuo\src\pages\News\medianews\index.scss         | SCSS       |        123 |          9 |         23 |        155 |
+| e:\dianuo\src\pages\News\newsList\index.js            | JavaScript |         81 |          1 |         13 |         95 |
+| e:\dianuo\src\pages\News\newsList\index.scss          | SCSS       |        123 |          9 |         23 |        155 |
+| e:\dianuo\src\pages\News\newsdetail\index.js          | JavaScript |         97 |          0 |         18 |        115 |
+| e:\dianuo\src\pages\News\newsdetail\index.scss        | SCSS       |         93 |          4 |         22 |        119 |
+| e:\dianuo\src\pages\Product\all\index.js              | JavaScript |         75 |          3 |         14 |         92 |
+| e:\dianuo\src\pages\Product\all\index.scss            | SCSS       |          0 |          0 |          1 |          1 |
+| e:\dianuo\src\pages\Product\detail\index.js           | JavaScript |        254 |         11 |         39 |        304 |
+| e:\dianuo\src\pages\Product\detail\index.scss         | SCSS       |        218 |          6 |         41 |        265 |
+| e:\dianuo\src\pages\Product\fxy\index.js              | JavaScript |         75 |          3 |         14 |         92 |
+| e:\dianuo\src\pages\Product\fxy\index.scss            | SCSS       |          0 |          0 |          1 |          1 |
+| e:\dianuo\src\pages\Product\hc\index.js               | JavaScript |         75 |          3 |         14 |         92 |
+| e:\dianuo\src\pages\Product\hc\index.scss             | SCSS       |          0 |          0 |          1 |          1 |
+| e:\dianuo\src\pages\Product\index.js                  | JavaScript |         20 |          0 |          5 |         25 |
+| e:\dianuo\src\pages\Product\index.scss                | SCSS       |         72 |          3 |         12 |         87 |
+| e:\dianuo\src\pages\Product\newPro\index.js           | JavaScript |         18 |          0 |          3 |         21 |
+| e:\dianuo\src\pages\Product\newPro\index.scss         | SCSS       |         31 |          2 |          3 |         36 |
+| e:\dianuo\src\pages\Product\other\index.js            | JavaScript |         72 |          3 |         12 |         87 |
+| e:\dianuo\src\pages\Product\other\index.scss          | SCSS       |          0 |          0 |          1 |          1 |
+| e:\dianuo\src\pages\Product\sj\index.js               | JavaScript |         75 |          3 |         14 |         92 |
+| e:\dianuo\src\pages\Product\sj\index.scss             | SCSS       |          0 |          0 |          1 |          1 |
+| e:\dianuo\src\pages\Recruit\index.js                  | JavaScript |         21 |          0 |          3 |         24 |
+| e:\dianuo\src\pages\Recruit\jobdetail\index.js        | JavaScript |         69 |          1 |         14 |         84 |
+| e:\dianuo\src\pages\Recruit\jobdetail\index.scss      | SCSS       |         43 |          1 |          8 |         52 |
+| e:\dianuo\src\pages\Recruit\position\index.js         | JavaScript |         42 |          1 |          7 |         50 |
+| e:\dianuo\src\pages\Recruit\position\index.scss       | SCSS       |         68 |          1 |         13 |         82 |
+| e:\dianuo\src\pages\Recruit\requirement\index.js      | JavaScript |         19 |          0 |          3 |         22 |
+| e:\dianuo\src\pages\Recruit\requirement\index.scss    | SCSS       |         48 |          2 |         10 |         60 |
+| e:\dianuo\src\pages\Service\aftersale\index.js        | JavaScript |         31 |          0 |          7 |         38 |
+| e:\dianuo\src\pages\Service\aftersale\index.scss      | SCSS       |         81 |          2 |         12 |         95 |
+| e:\dianuo\src\pages\Service\index.js                  | JavaScript |         22 |          0 |          4 |         26 |
+| e:\dianuo\src\pages\Service\index.scss                | SCSS       |          0 |          0 |          1 |          1 |
+| e:\dianuo\src\pages\Service\video\index.js            | JavaScript |         48 |          2 |          8 |         58 |
+| e:\dianuo\src\pages\Service\video\index.scss          | SCSS       |         42 |          3 |          6 |         51 |
+| e:\dianuo\src\router\index.js                         | JavaScript |        189 |          2 |          2 |        193 |
+| e:\dianuo\src\store\index.js                          | JavaScript |         22 |          1 |          2 |         25 |
+| e:\dianuo\src\store\modules\jobDetailStore.js         | JavaScript |         28 |          3 |          6 |         37 |
+| e:\dianuo\src\store\modules\latestNewsStore.js        | JavaScript |         16 |          0 |          3 |         19 |
+| e:\dianuo\src\store\modules\navBarStore.js            | JavaScript |         23 |          4 |          6 |         33 |
+| e:\dianuo\src\store\modules\newsDetailStore.js        | JavaScript |         28 |          1 |          6 |         35 |
+| e:\dianuo\src\store\modules\newsListStore.js          | JavaScript |         34 |          6 |          6 |         46 |
+| e:\dianuo\src\store\modules\newsTypeStore.js          | JavaScript |         35 |          5 |          6 |         46 |
+| e:\dianuo\src\store\modules\recruitPositionStore.js   | JavaScript |         28 |          4 |          6 |         38 |
+| e:\dianuo\src\store\modules\serviceVideoStore.js      | JavaScript |         34 |          3 |          6 |         43 |
+| Total                                                 |            |      5,731 |        259 |      1,007 |      6,997 |
++-------------------------------------------------------+------------+------------+------------+------------+------------+

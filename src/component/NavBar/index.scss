@@ -3,6 +3,11 @@
     width: 100%;
     z-index: 1000;
     padding: 22px;
+
+    @media (max-width: 768px) {
+        padding: 10px;
+    }
+
     border-bottom: 1px solid #ffffff33;
     display: flex;
     flex-wrap: wrap;
@@ -22,6 +27,15 @@
     width: 242px;
     height: 32px;
 }
+
+@media (max-width: 768px) {
+    .navbar-logo {
+        width: 40%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
 
 .search-logo {
     width: 32px;
@@ -127,7 +141,7 @@
 // ——————————————————————— 导航栏移动端样式 —————————————————————————————
 
 @media (max-width: 768px) {
-    
+
     .mobile-toggle-button {
         display: block;
     }
@@ -196,6 +210,18 @@
     position: relative;
     height: 42px;
     display: inline-block;
+    // border: 1px solid red;
+}
+
+@media (max-width: 768px) {
+    .changeLanguage {
+        width: 100px;
+        position: relative;
+        height: 42px;
+        display: inline-block;
+        // border: 1px solid red;
+        font-size: 14px;
+    }
 }
 
 .currentLan {
@@ -237,4 +263,14 @@
     font-size: 24px;
     cursor: pointer;
     padding: 0px 10px 5px 10px;
+}
+
+@media (max-size: 768px) {
+    .mobile-display-button {
+        background: none;
+        border: none;
+        font-size: 14px;
+        cursor: pointer;
+        padding: 0px 10px 5px 10px;
+    }
 }
