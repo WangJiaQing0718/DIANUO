@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import './index.scss'
 import { useDispatch, useSelector } from 'react-redux';
 import { getNewsType } from '@/store/modules/newsTypeStore';
@@ -6,8 +6,10 @@ import { setLastData, setNextData } from '@/store/modules/latestNewsStore';
 import Pagination from '@/component/Pagination';
 import dayjs from 'dayjs';
 import { useNavigate } from 'react-router-dom';
+import { DeviceContext } from '@/deviceContext';
 
 const FirmNews = () => {
+    const { isMobile } = useContext(DeviceContext);
     const navigate = useNavigate();
     const {
         newsType,
@@ -57,28 +59,44 @@ const FirmNews = () => {
                     {
                         newsType?.map((item, index) => (
                             <div className='grid_Layout' onClick={() => linkToDetail(index, item.id)}>
-                                <div id='item1'>
-                                    <div>
-                                        {dayjs(item.create_time).format("DD")}
-                                    </div>
-                                    <div>
-                                        {dayjs(item.create_time).format("YYYY-MM")}
-                                    </div>
-                                </div>
+                                {isMobile ?
+                                    <>
+                                        <div id='item123'>
+                                            <div id='div1'>{item.news_title}</div>
+                                            <div id='div2'>{item.news_content?.default_text.text}</div>
+                                            <div id='div3'>{item.create_time}</div>
+                                        </div>
 
-                                <div id='item2'>
-                                    <hr></hr>
-                                    <div></div>
-                                </div>
+                                        <div id='item4'>
+                                            <img src={item.news_pic}></img>
+                                        </div>
+                                    </>
+                                :
+                                    <>
+                                        <div id='item1'>
+                                            <div>
+                                                {dayjs(item.create_time).format("DD")}
+                                            </div>
+                                            <div>
+                                                {dayjs(item.create_time).format("YYYY-MM")}
+                                            </div>
+                                        </div>
 
-                                <div id='item3'>
-                                    <div>{item.news_title}</div>
-                                    <div>{item.news_content?.default_text.text}</div>
-                                </div>
+                                        <div id='item2'>
+                                            <hr></hr>
+                                            <div></div>
+                                        </div>
 
-                                <div id='item4'>
-                                    <img src={item.news_pic}></img>
-                                </div>
+                                        <div id='item3'>
+                                            <div>{item.news_title}</div>
+                                            <div>{item.news_content?.default_text.text}</div>
+                                        </div>
+
+                                        <div id='item4'>
+                                            <img src={item.news_pic}></img>
+                                        </div>
+                                    </>
+                                }
                             </div>
                         ))
                     }

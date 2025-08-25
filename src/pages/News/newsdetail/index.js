@@ -4,13 +4,15 @@ import HeadSection from "@/component/HeadSection"
 import { useNavigate, useParams } from 'react-router-dom';
 import './index.scss'
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect, useLayoutEffect } from 'react';
+import { useContext, useEffect, useLayoutEffect } from 'react';
 import { getNewsList } from '@/store/modules/newsListStore';
 import { setLatestNews } from '@/store/modules/latestNewsStore';
 
 import { getNewsDetail } from '@/store/modules/newsDetailStore';
+import { DeviceContext } from "@/deviceContext";
 
 const NewsDetail = () => {
+    const { isMobile } = useContext(DeviceContext);
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const { id } = useParams();
@@ -70,12 +72,12 @@ const NewsDetail = () => {
 
             <div className="newsDetail_Container">
                 <div className="newsDetail_Content">
-                    <div className="newsDetail_GridLayout">
-                        <div id="newsDetail_gridItem1">
-                            <div id="title">{newsDetail.news_title}</div>
+                    <div className={isMobile ? "newsDetail_GridLayout" : "newsDetail_GridLayout_PC"}>
+                        <div className="newsDetail_gridItem1">
+                            <div className="title1">{newsDetail.news_title}</div>
                             <hr></hr>
-                            <div id="time">发布时间： {newsDetail.create_time}</div>
-                            <div id="shareIcon">
+                            <div className="time">发布时间： {newsDetail.create_time}</div>
+                            <div className="shareIcon">
                                 <span><img src="http://nas.wjq718.fun:10001/imageFiles/i31e2l70zwnc84to.png" alt="" /></span>
                                 <span><img src="http://nas.wjq718.fun:10001/imageFiles/jzare6yo789psx1t.png" alt="" /></span>
                                 <span><img src="http://nas.wjq718.fun:10001/imageFiles/d08f7czn16r4jxku.png" alt="" /></span>
@@ -84,24 +86,24 @@ const NewsDetail = () => {
                             </div>
                             <hr></hr>
 
-                            <div id="defaultText">{newsDetail.news_content.default_text.text}</div>
+                            <div className="defaultText">{newsDetail.news_content.default_text.text}</div>
 
                             {(newsDetail.news_type === 1 || newsDetail.news_type === 2) &&
                                 <>
                                     {newsDetail.news_content.news_content.map((item, index) => (
-                                        <div id="content12">{item.content}</div>
+                                        <div className="content12">{item.content}</div>
                                     ))}
 
                                     {newsDetail.news_content.subscript !== null &&
                                         newsDetail.news_content.subscript.map((item, index) => (
-                                            <div id="subscript">{item.content}</div>
+                                            <div className="subscript">{item.content}</div>
                                         ))
                                     }
                                     <br />
                                 </>
                             }
 
-                            {newsDetail.news_type === 3 && <div id="content3">
+                            {newsDetail.news_type === 3 && <div className="content3">
                                 <div>{newsDetail.news_content.news_content[0].content}</div>
                                 <div>{newsDetail.news_content.news_content[1].content}</div>
                                 <br />
@@ -113,7 +115,7 @@ const NewsDetail = () => {
 
                             {newsDetail.related_links !== null &&
                                 newsDetail.related_links.link?.map((item, index) => (
-                                    <div><a id="linkName" title={item.name} href={item.url}>{item.name}</a></div>
+                                    <div><a className="linkName" title={item.name} href={item.url}>{item.name}</a></div>
                                 ))
                             }
 
@@ -126,20 +128,20 @@ const NewsDetail = () => {
                                     {lastData === null ? "无" : lastData.news_title}
                                 </div>
 
-                                <div style={{ textAlign: "right"}}>
+                                <div style={{ textAlign: "right" }}>
                                     {nextData === null ? "无" : nextData.news_title}
                                 </div>
-                                <div style={{ textAlign: "center"}}>下一页</div>
+                                <div style={{ textAlign: "center" }}>下一页</div>
                             </div>
 
                         </div>
 
-                        <div id="newsDetail_gridItem2">
-                            <div id="title">实时咨询</div>
+                        <div className="newsDetail_gridItem2">
+                            <div className="title2">实时咨询</div>
                             {latestNews?.map((item, index) =>
                                 <div className="latestNews_Content" onClick={() => linkToDetail(index, item.id)}>
-                                    <div id="text1">{item.news_title}</div>
-                                    <div id="text2">{item.news_content.default_text.text}</div>
+                                    <div className="text1">{item.news_title}</div>
+                                    <div className="text2">{item.news_content.default_text.text}</div>
                                     <div>了解详情➔</div>
                                 </div>
                             )}

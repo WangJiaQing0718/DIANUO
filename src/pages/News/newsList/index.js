@@ -1,4 +1,4 @@
-import { useLayoutEffect } from 'react';
+import { useContext, useLayoutEffect } from 'react';
 import './index.scss'
 import { useDispatch, useSelector } from 'react-redux';
 import { getNewsList } from '@/store/modules/newsListStore';
@@ -6,8 +6,10 @@ import { setLastData, setNextData } from '@/store/modules/latestNewsStore';
 import Pagination from '@/component/Pagination';
 import dayjs from 'dayjs';
 import { useNavigate } from 'react-router-dom';
+import { DeviceContext } from '@/deviceContext';
 
 const NewsList = () => {
+    const { isMobile } = useContext(DeviceContext);
     const navigate = useNavigate();
     const {
         newsList,
@@ -33,13 +35,13 @@ const NewsList = () => {
         // console.log("id:", id);
         if (idx > 0) {
             // console.log("last:",newsList[idx-1]);
-            dispatch(setLastData(newsList[idx-1]));
-        }else{
+            dispatch(setLastData(newsList[idx - 1]));
+        } else {
             dispatch(setLastData(null));
         }
-        if (idx < newsList.length-1) {
-            dispatch(setNextData(newsList[idx+1]));
-        }else{
+        if (idx < newsList.length - 1) {
+            dispatch(setNextData(newsList[idx + 1]));
+        } else {
             dispatch(setNextData(null));
         }
         if (newsList[idx].news_content.news_url === null) {
@@ -56,28 +58,44 @@ const NewsList = () => {
                     {
                         newsList?.map((item, index) => (
                             <div className='grid_Layout' onClick={() => linkToDetail(index, item.id)}>
-                                <div id='item1'>
-                                    <div>
-                                        {dayjs(item.create_time).format("DD")}
-                                    </div>
-                                    <div>
-                                        {dayjs(item.create_time).format("YYYY-MM")}
-                                    </div>
-                                </div>
+                                {isMobile ?
+                                    <>
+                                        <div id='item123'>
+                                            <div id='div1'>{item.news_title}</div>
+                                            <div id='div2'>{item.news_content?.default_text.text}</div>
+                                            <div id='div3'>{item.create_time}</div>
+                                        </div>
 
-                                <div id='item2'>
-                                    <hr></hr>
-                                    <div></div>
-                                </div>
+                                        <div id='item4'>
+                                            <img src={item.news_pic}></img>
+                                        </div>
+                                    </>
+                                :
+                                    <>
+                                        <div id='item1'>
+                                            <div>
+                                                {dayjs(item.create_time).format("DD")}
+                                            </div>
+                                            <div>
+                                                {dayjs(item.create_time).format("YYYY-MM")}
+                                            </div>
+                                        </div>
 
-                                <div id='item3'>
-                                    <div>{item.news_title}</div>
-                                    <div>{item.news_content?.default_text.text}</div>
-                                </div>
+                                        <div id='item2'>
+                                            <hr></hr>
+                                            <div></div>
+                                        </div>
 
-                                <div id='item4'>
-                                    <img src={item.news_pic}></img>
-                                </div>
+                                        <div id='item3'>
+                                            <div>{item.news_title}</div>
+                                            <div>{item.news_content?.default_text.text}</div>
+                                        </div>
+
+                                        <div id='item4'>
+                                            <img src={item.news_pic}></img>
+                                        </div>
+                                    </>
+                                }
                             </div>
                         ))
                     }
