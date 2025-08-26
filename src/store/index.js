@@ -7,6 +7,8 @@ import newsListReducer from './modules/newsListStore'
 import newsTypeReducer from './modules/newsTypeStore'
 import newsDetailReducer from './modules/newsDetailStore'
 import latestNewsReducer from './modules/latestNewsStore' 
+import downloadListReducer from './modules/downloadListStore'
+import downloadDetailReducer from './modules/downloadDetailStore'
 import { configureStore } from '@reduxjs/toolkit'
 
 const store = configureStore({
@@ -18,7 +20,9 @@ const store = configureStore({
         newsList: newsListReducer,
         newsType: newsTypeReducer,
         newsDetail: newsDetailReducer,
-        latestNews: latestNewsReducer
+        latestNews: latestNewsReducer,
+        downloadList: downloadListReducer,
+        downloadDetail: downloadDetailReducer
     }
 })
 

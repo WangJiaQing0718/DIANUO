@@ -1,0 +1,97 @@
+.downloadDetail_Container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    // border: 1px solid red;
+}
+
+.downloadDetail_Content {
+    width: 90%;
+    max-width: 1600px;
+    margin: 50px 0px;
+    // padding: 50px 0px;
+    // border: 1px solid red;
+}
+
+.downloadDetail {
+
+    #title {
+        font-size: 28px;
+        color: #333333;
+        line-height: 50px;
+        font-weight: 500;
+        margin: 0 20px;
+    }
+
+    hr {
+        margin: 20px 0px;
+        border: 0.75px solid #f2f2f2;
+    }
+}
+
+.detail_GridLayout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .shareIcon {
+        text-align: right;
+
+        img {
+            width: 30px;
+            height: 30px;
+            margin: 0px 5px;
+        }
+    }
+
+    #time {
+        line-height: 30px;
+        font-size: 16px;
+        color: #c0c4cc;
+    }
+}
+
+.download_box {
+    border: 1px solid #dee2e6;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px 20px;
+    line-height: 40px;
+    span{
+        margin: 20px 5px;
+    }
+
+}
+
+.sizebtn_box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    // line-height: 40px;
+}
+
+#btn {
+    background-color: #409eff;
+    color: white;
+    width: 72px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.buttom_text{
+    margin: 20px;
+    span{
+        margin: 20px 5px;
+    }
+}
+
+.pageLink {
+    display: grid;
+    grid-template-columns: 2fr 8fr 8fr 2fr;
+    font-size: 14px;
+    color: #555555;
+    line-height: 28px;
+}

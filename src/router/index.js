@@ -28,6 +28,8 @@ import FirmNews from "@/pages/News/firmnews";
 import IndustryNews from "@/pages/News/industrynews";
 import MediaNews from "@/pages/News/medianews";
 import NewsDetail from "@/pages/News/newsdetail";
+import Download from "@/pages/Service/download";
+import DownloadDetail from "@/pages/Service/downloaddetail";
 
 // 页面路由
 const router = createBrowserRouter([
@@ -113,13 +115,17 @@ const router = createBrowserRouter([
       },
       {
         path: 'download',
-        element: <Error />
+        element: <Download />
       },
       {
         path: 'video',
         element: <Video />
       }
     ]
+  },
+  {
+    path: '/download_detail/:id',
+    element: <DownloadDetail/>
   },
   {
     path: '/news',

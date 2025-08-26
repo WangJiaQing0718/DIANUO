@@ -49,6 +49,8 @@ const PageMidNav = () => {
             childArrayRes = navBarList.find(item => item.path === 'recruit');
         } else if (routerArray[0] === 'news_detail'){
             childArrayRes = navBarList.find(item => item.path === 'news');
+        } else if (routerArray[0] === 'download_detail'){
+            childArrayRes = navBarList.find(item => item.path === 'service');
         } else {
             childArrayRes = navBarList.find(item => item.path === routerArray[0]);
         }
@@ -65,13 +67,15 @@ const PageMidNav = () => {
             setRouterLink([...routerLink, firstRouter]);
 
             // 二级路由匹配()
-            if (routerArray.length > 1 && routerArray[0] !== 'job_detail' && routerArray[0] !== 'news_detail') {
+            if (routerArray.length > 1 && routerArray[0] !== 'job_detail' && routerArray[0] !== 'news_detail' && routerArray[0] !== 'download_detail') {
                 const currentDataRes = childArrayRes.child.find(child => child.cpath === routerArray[1]);
                 const currentIndex = childArrayRes.child.findIndex(child => child.cpath === routerArray[1]); 
                 result.currentData = currentDataRes;
                 if (routerArray[0] === 'job_detail') {
                     setCurrentIndex(null);
                 } else if (routerArray[0] === 'news_detail'){
+                    setCurrentIndex(null);
+                } else if (routerArray[0] === 'download_detail'){
                     setCurrentIndex(null);
                 } else {
                     setCurrentIndex(currentIndex);   
