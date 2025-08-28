@@ -62,6 +62,7 @@ const DownloadDetail = () => {
         }
     };
 
+    // 下载链接
     const downloadFile = (url, name) => (event) => {
         // 阻止事件冒泡，避免触发父元素的点击事件（跳转到详情页）
         event.stopPropagation();
