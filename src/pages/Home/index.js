@@ -5,6 +5,8 @@ import { DeviceContext } from "@/deviceContext"
 import ButtomBar from "@/component/ButtomBar"
 import SlideShow from "./SlideShow"
 import FirmIntro from "./FirmIntro"
+import ServiceSupport from "./ServiceSupport"
+import NewsService from "./NewsService"
 
 
 const Home = () => {
@@ -42,6 +44,9 @@ const Home = () => {
             <div>1234567890</div>
             <div>1234567890</div>
             <div>1234567890</div>
+            
+            <div><ServiceSupport /></div>
+            <div><NewsService /></div>
 
 
             

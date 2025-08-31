@@ -1,0 +1,69 @@
+.NewsService_Container {
+    width: 100%;
+    background-image: url("http://nas.wjq718.fun:10001/imageFiles/xi8pc4fqzkaemu37.png");
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid rgb(245,245,245);
+}
+
+.NewsService_Content {
+    width: 90%;
+    max-width: 1600px;
+    padding: 50px;
+    // border: 1px solid red;
+}
+
+.NewsService_title {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 50px;
+    border: 1px solid rgba(255, 255, 255, 0);
+
+    .NewsService_bgText {
+        width: 100%;
+        font-size: 7vw;
+        font-family: Arial, Helvetica, sans-serif;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 2px rgba(143, 143, 143, 0.1);
+        z-index: 1;
+        position: absolute;
+    }
+
+    .NewsService_headText {
+        display: block;
+        margin: 30px 0px 0px;
+        font-size: 3vw;
+        font-weight: 700;
+        color: #101010;
+        letter-spacing: 2px;
+    }
+
+    hr {
+        max-width: 60px;
+        border: 2px solid #2f9be0;
+    }
+}
+
+.NewsService_GridLayout {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+
+.NewsService_GridItem{
+    background-color: #ffffff;
+    box-sizing: border-box;
+    border-radius: 20px;
+    box-shadow: 0 0 5px 2px #efefef;
+    padding: 30px;
+
+    #tag{
+        background-color: #54b2ee;
+        color: #ffffff;
+        padding: 5px 20px;
+        border-radius: 20px;
+    }
+}
