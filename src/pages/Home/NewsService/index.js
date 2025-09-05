@@ -1,6 +1,29 @@
+import { useDispatch, useSelector } from 'react-redux'
 import './index.scss'
+import { getLatestNews } from '@/store/modules/latestNewsStore'
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 const NewsService = () => {
+    const { latestNews } = useSelector(state => state.latestNews);
+
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(getLatestNews());
+    }, [dispatch]);
+
+    console.log("latestNews:", latestNews);
+
+    const navigate = useNavigate()
+    const linkToDetail = (idx, id) => {
+        if (latestNews[idx].news_content.news_url === null) {
+            navigate(`/news_detail/${id}`);
+        } else {
+            window.open(`${latestNews[idx].news_content.news_url.url}`, '_self');
+        }
+    }
+
 
     return (
         <div className='NewsService_Container'>
@@ -12,19 +35,25 @@ const NewsService = () => {
                 </div>
 
                 <div className='NewsService_GridLayout'>
-                    <div className='NewsService_GridItem'>
-                        <div><span id='tag'>行业动态</span></div>
-                        <div>2024-05-20</div>
-                        <div>国家药监局关于发布体外诊断试剂分类目录的公告</div>
-                        <div>为贯彻落实《医疗器械监督管理条例》（国务院令第739号）有关要求，进一步指导体外诊断试剂分类，根据《体外诊断试剂注册与备案管理办法》</div>
-                        <div>
-                            <img src='https://omo-oss-image.thefastimg.com/portal-saas/pg2025061617303804440/cms/image/103af35c-716b-42f2-9330-7018d19add8c.png_290xaf.png' alt=''></img>
+                    {latestNews?.map((item, index) =>
+                        <div className='NewsService_GridItem' key={index} onClick={() => linkToDetail(index, item.id)}>
+                            <div><span id='tag'>行业动态</span></div>
+                            <div id='create_time'>{item.create_time}</div>
+                            <div id='news_title'>{item.news_title}</div>
+                            <div id='default_text'>{item.news_content.default_text.text}</div>
+                            <div className='pic_box'>
+                                {item.news_pic ? 
+                                    <img src={item.news_pic} alt=''></img>
+                                    :
+                                    <div id='default_pic'>DIANUO</div>
+                                }
+                            </div>
                         </div>
-                    </div>
+                    )}
                 </div>
             </div>
         </div>
     )
 }
 
-export default NewsService
+export default NewsService 

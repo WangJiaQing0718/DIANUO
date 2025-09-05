@@ -45,13 +45,6 @@ const NavBar = () => {
 
     // 记录鼠标悬停导航项的索引
     const [hoveredNav, setHoveredNav] = useState(null);
-    const navItemClickEvent = (page, index) => {
-        if (isMobile && page.child.length > 0) {
-            toggleMobileDropdown(index);
-        } else {
-            linkToPage(page.path);
-        }
-    }
 
     const navigate = useNavigate()
     // 一级路由点击事件
@@ -69,6 +62,7 @@ const NavBar = () => {
     // 中英文切换菜单是否打开
     const [isChinese, setIsChinese] = useState(true)
     const [isOpenLanguage, setIsOpenLanguage] = useState(false)
+    
     const changeLanguage = () => {
         setIsChinese(!isChinese)
         if (isChinese) {
@@ -129,9 +123,10 @@ const NavBar = () => {
             <div className="navbar-container"
                 onMouseEnter={() => setIsTransparent(false)}
                 onMouseLeave={() => mouseLeaveChange()}
-                style={{ backgroundColor: isMobile ? '#ffffff' : (isTransparent ? 'transparent' : '#ffffff'),
+                style={{
+                    backgroundColor: isMobile ? '#ffffff' : (isTransparent ? 'transparent' : '#ffffff'),
                     boxShadow: isTransparent ? '' : '0 3px 5px #e0e0e0'
-                 }}
+                }}
             >
                 <div className='navbar-box'>
                     {/* 图标 */}
@@ -148,7 +143,7 @@ const NavBar = () => {
                     <div className={`navbar ${isMobile ? 'mobile-nav' : ''} ${isMobileMenuOpen ? 'mobile-nav-open' : ''}`} style={{ color: isMobile ? '#333333' : (isTransparent ? "#ffffff" : "#333333") }}>
                         {navBarList.map((page, index) => (
                             <div key={page.path} className='nav-item' onMouseEnter={!isMobile ? () => setHoveredNav(index) : undefined} onMouseLeave={!isMobile ? () => setHoveredNav(null) : undefined}>
-                                <div className='nav-btn' onClick={() => navItemClickEvent(page, index)}>{page.name}
+                                <div className='nav-btn' onClick={() => linkToPage(page.path)}>{page.name}
                                     {page.child.length > 0 && (
                                         <span className={`dropdown-arrow ${isMobile ? 'mobile-arrow' : ''}`}>
                                             {isMobile ? (openMobileDropdowns[index] ? '▼' : '▶') : ''}

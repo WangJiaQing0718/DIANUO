@@ -191,7 +191,7 @@ const router = createBrowserRouter([
   },
   // en
   {
-    path: 'Error',
+    path: 'English',
     element: <Error />
   }
 ])
