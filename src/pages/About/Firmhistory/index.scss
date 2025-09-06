@@ -1,0 +1,50 @@
+.FirmHistory_Container {
+    position: relative;
+    width: 100%;
+    background-image: url("http://nas.wjq718.fun:10001/imageFiles/2r603mvgdk9enwyt.png");
+    min-height: 300px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    display: flex;
+    // border: 1px solid red;
+    padding: 50px 0px;
+}
+
+.FirmHistory_Content {
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+    // border: 1px solid red;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.FirmHistory_head {
+    font-size: 44px;
+    font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+    line-height: 50px;
+    font-weight: 700;
+    color: #333333;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+
+// 修改
+.FirmHistory_SlideShow{
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+// 修改
+.SlideShow_Item{
+    flex: 0 0 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+}

@@ -30,6 +30,7 @@ import MediaNews from "@/pages/News/medianews";
 import NewsDetail from "@/pages/News/newsdetail";
 import Download from "@/pages/Service/download";
 import DownloadDetail from "@/pages/Service/downloaddetail";
+import FirmHistory from "../pages/About/Firmhistory";
 
 // 页面路由
 const router = createBrowserRouter([
@@ -59,7 +60,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'firmhistory',
-        element: <Error />
+        element: <FirmHistory />
       },
       {
         path: 'firmpartner',

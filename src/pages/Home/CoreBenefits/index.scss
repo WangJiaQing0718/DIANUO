@@ -2,9 +2,10 @@
     position: relative;
     width: 100%;
     background-image: url("http://nas.wjq718.fun:10001/imageFiles/kaj5g3hzqy94c6to.png");
-    min-height: 300px;
+    // min-height: 300px;
     background-size: cover;
     background-position: center center;
+    background-attachment: fixed;
     display: flex;
     // border: 1px solid red;
     padding: 50px 0px;
