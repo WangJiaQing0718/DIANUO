@@ -8,6 +8,7 @@ import FirmIntro from "./FirmIntro"
 import ServiceSupport from "./ServiceSupport"
 import NewsService from "./NewsService"
 import CoreBenefits from "./CoreBenefits"
+import ProductCenter from "./ProductCenter"
 
 
 const Home = () => {
@@ -18,26 +19,7 @@ const Home = () => {
             <div><NavBar/></div>
             <div><SlideShow /></div>
             <div><FirmIntro /></div>
-            
-            
-            <div>1234567890</div>
-            <div>1234567890</div>
-            <div>1234567890</div>
-            <div>1234567890</div>
-            <div>1234567890</div>
-            <div>1234567890</div>
-            <div>1234567890</div>
-            <div>1234567890</div>
-            <div>1234567890</div>
-            <div>1234567890</div>
-            <div>1234567890</div>
-            <div>1234567890</div>
-            <div>1234567890</div>
-            <div>1234567890</div>
-            <div>1234567890</div>
-            <div>1234567890</div>
-
-
+            <div><ProductCenter /></div>
             <div><CoreBenefits /></div>
             <div><ServiceSupport /></div>
             <div><NewsService /></div>
