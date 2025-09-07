@@ -62,7 +62,7 @@ const NavBar = () => {
     // 中英文切换菜单是否打开
     const [isChinese, setIsChinese] = useState(true)
     const [isOpenLanguage, setIsOpenLanguage] = useState(false)
-    
+
     const changeLanguage = () => {
         setIsChinese(!isChinese)
         if (isChinese) {
@@ -103,11 +103,26 @@ const NavBar = () => {
             setOpenMobileDropdowns({});
         }
     };
+
     const toggleMobileDropdown = (index) => {
-        setOpenMobileDropdowns(prev => ({
-            ...prev,
-            [index]: !prev[index]
-        }));
+        setOpenMobileDropdowns(prev => {
+            // 如果当前 index 已经是展开的，则关闭它，其他也全部关闭
+            if (prev[index] === true) {
+                const newState = {};
+                for (let i = 0; i < navBarList.length; i++) {
+                    newState[i] = false; // 全部关闭
+                }
+                return newState;
+            }
+            // 关闭其他所有，只展开当前 index
+            else {
+                const newState = {};
+                for (let i = 0; i < navBarList.length; i++) {
+                    newState[i] = i === index; // 只有当前项为 true
+                }
+                return newState;
+            }
+        });
     };
 
     // 修复下滑距离不为0时，鼠标移动导致的样式错误
@@ -143,10 +158,11 @@ const NavBar = () => {
                     <div className={`navbar ${isMobile ? 'mobile-nav' : ''} ${isMobileMenuOpen ? 'mobile-nav-open' : ''}`} style={{ color: isMobile ? '#333333' : (isTransparent ? "#ffffff" : "#333333") }}>
                         {navBarList.map((page, index) => (
                             <div key={page.path} className='nav-item' onMouseEnter={!isMobile ? () => setHoveredNav(index) : undefined} onMouseLeave={!isMobile ? () => setHoveredNav(null) : undefined}>
-                                <div className='nav-btn' onClick={() => linkToPage(page.path)}>{page.name}
+                                <div className='nav-btn'>
+                                    <span onClick={() => linkToPage(page.path)}>{page.name}</span>
                                     {page.child.length > 0 && (
-                                        <span className={`dropdown-arrow ${isMobile ? 'mobile-arrow' : ''}`}>
-                                            {isMobile ? (openMobileDropdowns[index] ? '▼' : '▶') : ''}
+                                        <span onClick={() => toggleMobileDropdown(index)} className={`dropdown-arrow ${isMobile ? 'mobile-arrow' : ''}`}>
+                                            {isMobile ? (openMobileDropdowns[index] ? '▼' : '▲') : ''}
                                         </span>
                                     )}
                                 </div>
@@ -161,7 +177,10 @@ const NavBar = () => {
                                         {page.child.map(child => (
                                             <li
                                                 key={child.cpath}
-                                                onClick={() => linkTochildPage(page.path, child.cpath)}
+                                                onClick={() => {
+                                                    linkTochildPage(page.path, child.cpath);
+                                                    toggleMobileDropdown(index);
+                                                }}
                                             >
                                                 {child.cname}
                                             </li>
