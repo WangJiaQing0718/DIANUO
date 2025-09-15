@@ -160,7 +160,7 @@ const NavBar = () => {
                             <div key={page.path} className='nav-item' onMouseEnter={!isMobile ? () => setHoveredNav(index) : undefined} onMouseLeave={!isMobile ? () => setHoveredNav(null) : undefined}>
                                 <div className='nav-btn'>
                                     <span onClick={() => linkToPage(page.path)}>{page.name}</span>
-                                    {page.child.length > 0 && (
+                                    {isMobile && page.child.length > 0 && (
                                         <span onClick={() => toggleMobileDropdown(index)} className={`dropdown-arrow ${isMobile ? 'mobile-arrow' : ''}`}>
                                             {isMobile ? (openMobileDropdowns[index] ? '▼' : '▲') : ''}
                                         </span>
